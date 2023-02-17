@@ -1,6 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { PanaverseCommunity } from "./Panaverse_Community";
 import styles from "../../styles/Home.module.css";
+import CoreCourse from "./CoreCourse";
 
 const Header = () => {
   return (
@@ -42,6 +43,7 @@ const Header = () => {
       </Box>
 
       <PanaverseCommunity />
+      <CoreCourse />
     </>
   );
 };
