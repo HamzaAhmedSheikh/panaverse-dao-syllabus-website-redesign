@@ -8,13 +8,7 @@ const Quarter_II = () => {
   return (
     <>
       <Box display="flex" position="relative">
-        <Image
-          src="/images/cloud.jpg"
-          height={500}
-          width={500}
-          style={{ width: "270vh" }}
-          alt="cloud"
-        />
+        <Image src="/images/cloud.jpg" height={500} width={500} alt="cloud" />
       </Box>
 
       <Box

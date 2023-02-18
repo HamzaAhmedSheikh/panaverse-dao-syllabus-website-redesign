@@ -1,30 +1,29 @@
 "use client";
 import { Box, Heading, Flex, Text, Button, Container } from "@chakra-ui/react";
 // import Specialization from "../panaverse/Specialization";
-import Image from "next/image";
 import { quarterOne } from "../../../../data/data";
 import { AiFillLinkedin } from "react-icons/ai";
 import JavaScriptFundamentals from "./JavaScriptBasic";
 import OOP_with_Typescript from "./OOP_with_Typescript";
 import VC_with_Git from "./VC_with_Git";
 import Link from "next/link";
+import Image from "next/image";
 
 const Quarter1 = () => {
   return (
     <>
-      <Box
-        position="relative"
-        bgImage="url('/images/ts_logo.png')"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        bgAttachment="inherit"
-        height="70vh"
-        p={6}
-      />
+      <Box>
+        <Image
+          src="/images/ts_logo.png"
+          height={500}
+          width={1300}
+          // style={{ width: "180vh", position: "center" }}
+          alt="typescript logo"
+        />
+      </Box>
       <Box
         display="block"
-        padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
+        padding={{ sm: "2em 2em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         // className={styles.mainContent}
