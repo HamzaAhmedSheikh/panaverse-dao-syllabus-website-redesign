@@ -66,7 +66,7 @@ const coreQuarters = [
       "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
     imagePath: "/images/cloud-native-diagram.png",
     imageAlt: "cloud-native-computing",
-    url: "/",
+    url: "/CNCC",
   },
   {
     title: "Ambient Computing and IoT Specialization",
