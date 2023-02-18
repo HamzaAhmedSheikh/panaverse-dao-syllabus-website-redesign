@@ -1,20 +1,23 @@
 "use client";
-import { Box, Divider, Heading, Text } from "@chakra-ui/react";
+import { Box, Divider, Heading, Text, Center } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import Blender_3D from "./Blender_3D";
 
+import styles from "../../../styles/Home.module.css";
+
 const Metaverse = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/metaverse3.jpg"
-          height={500}
-          width={1300}
-          //   style={{ width: "220vh" }}
-          alt="metaverse"
-        />
+      <Box mt="1px">
+        <Center>
+          <Image
+            src="/images/metaverse3.jpg"
+            height={650}
+            width={650}
+            alt="metaverse"
+          />
+        </Center>
       </Box>
 
       <Box
@@ -22,6 +25,7 @@ const Metaverse = () => {
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
+        className={styles.mainContent}
       >
         <Heading
           id="quarter-v-mv-361-developing-planet-scale-open-virtual-and-augmented-metaverse-experiences"

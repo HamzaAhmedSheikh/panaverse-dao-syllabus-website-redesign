@@ -9,6 +9,7 @@ import {
   Card,
   CardBody,
   Divider,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -103,14 +104,15 @@ function CoreCourse() {
 const WEB3_Metaverse = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/download.jpg"
-          height={60}
-          width={500}
-          style={{ width: "240vh" }}
-          alt="web-3-metaverse image"
-        />
+      <Box mt="1px">
+        <Center>
+          <Image
+            src="/images/download.jpg"
+            height={400}
+            width={500}
+            alt="web-3-metaverse image"
+          />
+        </Center>
       </Box>
 
       <Box

@@ -1,6 +1,7 @@
 "use client";
-import { Box, Text, Heading, Divider } from "@chakra-ui/react";
+import { Box, Text, Heading, Divider, Center } from "@chakra-ui/react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../../../styles/Home.module.css";
 
 const CDK_Terraform = () => {
@@ -13,6 +14,14 @@ const CDK_Terraform = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
+        <Center>
+          <Image
+            src="/images/cdk-providers.png"
+            width={700}
+            height={300}
+            alt="terraform cdk"
+          />
+        </Center>
         <Heading
           id="quarter-v-cn-361-developing-multi-cloud-apps-using-cdk-for-terraform"
           as="h2"

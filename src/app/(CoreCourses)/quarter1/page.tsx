@@ -1,5 +1,13 @@
 "use client";
-import { Box, Heading, Flex, Text, Button, Container } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Flex,
+  Text,
+  Button,
+  Container,
+  Center,
+} from "@chakra-ui/react";
 // import Specialization from "../panaverse/Specialization";
 import { quarterOne } from "../../../../data/data";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -9,24 +17,27 @@ import VC_with_Git from "./VC_with_Git";
 import Link from "next/link";
 import Image from "next/image";
 
+import styles from "../../../styles/Home.module.css";
+
 const Quarter1 = () => {
   return (
     <>
       <Box>
-        <Image
-          src="/images/ts_logo.png"
-          height={500}
-          width={1300}
-          // style={{ width: "180vh", position: "center" }}
-          alt="typescript logo"
-        />
+        <Center>
+          <Image
+            src="/images/ts_logo.png"
+            height={650}
+            width={650}
+            alt="typescript logo"
+          />
+        </Center>
       </Box>
       <Box
         display="block"
         padding={{ sm: "2em 2em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
-        // className={styles.mainContent}
+        className={styles.mainContent}
         // lineHeight='1.75'
       >
         <Heading

@@ -9,6 +9,7 @@ import {
   CardBody,
   Stack,
   Divider,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,6 +18,16 @@ import styles from "../../../styles/Home.module.css";
 const MatterDevies = () => {
   return (
     <>
+      <Box mt="1px">
+        <Center>
+          <Image
+            src="/images/internet-of-things.png"
+            width={800}
+            height={400}
+            alt="Matter Device"
+          />
+        </Center>
+      </Box>
       <Box
         display="block"
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}

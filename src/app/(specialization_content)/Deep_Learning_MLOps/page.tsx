@@ -1,18 +1,22 @@
 "use client";
-import { Box, Heading, Text, Divider } from "@chakra-ui/react";
+import { Box, Heading, Text, Divider, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+
+import styles from "../../../styles/Home.module.css";
 
 const Quarter_V = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/mlops-cycle.png"
-          height={500}
-          width={1000}
-          alt="metaverse"
-        />
+      <Box>
+        <Center>
+          <Image
+            src="/images/mlops-cycle.png"
+            height={650}
+            width={650}
+            alt="metaverse"
+          />
+        </Center>
       </Box>
 
       <Box
@@ -20,6 +24,7 @@ const Quarter_V = () => {
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
+        className={styles.mainContent}
       >
         <Heading
           id="quarter-v-ai-361-deep-learning-and-mlops"
@@ -132,7 +137,7 @@ const Quarter_V = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/">Go back to Home Page</Link>
+          <Link href="/AI_Deep_Learning_Specialization">Go back </Link>
         </Text>
       </Box>
     </>

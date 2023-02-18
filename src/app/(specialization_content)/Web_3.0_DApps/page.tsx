@@ -1,26 +1,30 @@
 "use client";
-import { Box, Divider, Heading, Text } from "@chakra-ui/react";
+import { Box, Divider, Heading, Text, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
 import Tokennomics from "./Tokennomics";
 
+import styles from "../../../styles/Home.module.css";
+
 const Section_I = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/what_is_smart_contract.avif"
-          height={200}
-          width={1270}
-          alt="smart_contract"
-        />
+      <Box mt="1px">
+        <Center>
+          <Image
+            src="/images/what_is_smart_contract.avif"
+            height={400}
+            width={650}
+            alt="smart_contract"
+          />
+        </Center>
       </Box>
       <Box
         display="block"
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
-        // className={styles.mainContent}
+        className={styles.mainContent}
         // lineHeight='1.75'
       >
         <Heading

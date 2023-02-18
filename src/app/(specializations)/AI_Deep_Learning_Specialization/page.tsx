@@ -9,9 +9,12 @@ import {
   Card,
   CardBody,
   Divider,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+
+import styles from "../../../styles/Home.module.css";
 
 export interface StateElement {
   title: string;
@@ -41,80 +44,13 @@ export function CardsToDisplay(props: StateElement) {
   );
 }
 
-const coreQuarters = [
-  {
-    title: "Quarter IV",
-    content:
-      "AI-351: Developing Planet-Scale Intelligent APIs and Python Programming",
-    imagePath: "/images/py.jpg",
-    imageAlt: "python",
-    url: "/Python",
-  },
-  {
-    title: "Quarter V",
-    content: `AI-361: Deep Learning and MLOps`,
-    imagePath: "/images/mlops.jpg",
-    imageAlt: "mlops",
-    url: "/Deep_Learning_MLOps",
-  },
-];
-
-function CoreCourse() {
-  return (
-    <Flex
-      flexDir={{ base: "column", md: "row" }}
-      align={"center"}
-      alignContent="center"
-      alignItems={"center"}
-      maxW={"1440px"}
-      mx="auto"
-      pt={{ base: "5", md: "10" }}
-      px={{ base: "10", md: "20" }}
-    >
-      <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>Two more quarters remain for specialization:</Heading>
-
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(2, 1fr)",
-          }}
-          gap={6}
-          mx="auto"
-          maxW="8xl"
-          mt="1.5rem"
-        >
-          {coreQuarters.map((elem) => (
-            <Link href={elem.url}>
-              <CardsToDisplay
-                imageAlt={elem.imageAlt}
-                imageUrl={elem.imagePath}
-                title={elem.title}
-                content={elem.content}
-              />
-            </Link>
-          ))}
-        </Grid>
-      </Box>
-    </Flex>
-  );
-}
-
-const WEB3_Metaverse = () => {
+const AI = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/aibanner.jpg"
-          height={80}
-          width={1250}
-          style={{
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          alt="cloud"
-        />
+      <Box display="block" mt="1px">
+        <Center>
+          <Image src="/images/aibanner.jpg" width={650} height={650} alt="ai" />
+        </Center>
       </Box>
 
       <Box
@@ -122,6 +58,7 @@ const WEB3_Metaverse = () => {
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
+        className={styles.mainContent}
       >
         <Heading
           id="web-30-blockchain-and-metaverse-specialization"
@@ -186,4 +123,64 @@ const WEB3_Metaverse = () => {
   );
 };
 
-export default WEB3_Metaverse;
+export default AI;
+
+const coreQuarters = [
+  {
+    title: "Quarter IV",
+    content:
+      "AI-351: Developing Planet-Scale Intelligent APIs and Python Programming",
+    imagePath: "/images/py.jpg",
+    imageAlt: "python",
+    url: "/Python",
+  },
+  {
+    title: "Quarter V",
+    content: `AI-361: Deep Learning and MLOps`,
+    imagePath: "/images/mlops.jpg",
+    imageAlt: "mlops",
+    url: "/Deep_Learning_MLOps",
+  },
+];
+
+function CoreCourse() {
+  return (
+    <Flex
+      flexDir={{ base: "column", md: "row" }}
+      align={"center"}
+      alignContent="center"
+      alignItems={"center"}
+      maxW={"1440px"}
+      mx="auto"
+      pt={{ base: "5", md: "10" }}
+      px={{ base: "10", md: "20" }}
+    >
+      <Box mx="auto" pt="5" pb="10" textAlign="center">
+        <Heading>Two more quarters remain for specialization:</Heading>
+
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(2, 1fr)",
+          }}
+          gap={6}
+          mx="auto"
+          maxW="8xl"
+          mt="1.5rem"
+        >
+          {coreQuarters.map((elem) => (
+            <Link href={elem.url}>
+              <CardsToDisplay
+                imageAlt={elem.imageAlt}
+                imageUrl={elem.imagePath}
+                title={elem.title}
+                content={elem.content}
+              />
+            </Link>
+          ))}
+        </Grid>
+      </Box>
+    </Flex>
+  );
+}

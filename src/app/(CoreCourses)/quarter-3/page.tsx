@@ -1,24 +1,29 @@
 "use client";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+
+import styles from "../../../styles/Home.module.css";
 
 const Quarter_III = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image
-          src="/images/dollars.jpg"
-          height={200}
-          width={1320}
-          alt="cloud"
-        />
+      <Box>
+        <Center>
+          <Image
+            src="/images/dollars.jpg"
+            height={375}
+            width={1350}
+            alt="cloud"
+          />
+        </Center>
       </Box>
       <Box
         display="block"
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
+        className={styles.mainContent}
       >
         <Heading
           id="quarter-iii-core"

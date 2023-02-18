@@ -22,16 +22,16 @@ interface StateElement {
   imageAlt: string;
 }
 
-const CNCC = () => {
+const Genomics_and_Bioinformatics = () => {
   return (
     <>
       <Box mt="1px">
         <Center>
           <Image
-            src="/images/cloud-native-diagram.png"
-            width={500}
+            src="/images/Bioinformatics-graphic.png"
+            width={800}
             height={400}
-            alt="cloud native"
+            alt="Genomics_and_Bioinformatics"
           />
         </Center>
       </Box>
@@ -43,7 +43,7 @@ const CNCC = () => {
         className={styles.mainContent}
       >
         <Heading
-          id="cloud-native-computing-specialization"
+          id="genomics-and-bioinformatics-specialization"
           as="h2"
           fontSize="1.5em"
           mt="1rem"
@@ -51,12 +51,16 @@ const CNCC = () => {
           fontWeight="normal"
           color="#159957"
         >
-          Cloud-Native Computing Specialization
+          Genomics and Bioinformatics Specialization
         </Heading>
 
         <Text as="p" mt="1em" mb="1em" color="#606C71">
-          The Cloud-Native Computing Specialization focuses on Containers,
-          Kubernetes, and CDK for Kubernetes.
+          Genomics is the study of the total genetic makeup of individual
+          organisms, and how this genetic information is structured, functions,
+          and has evolved; bioinformatics encompasses a diverse range of
+          analytical methods and tools applied to genomic data. This
+          Specialization focus on performing complex bioinformatics analysis
+          using the most essential Python libraries and applications
         </Text>
 
         <Text
@@ -67,8 +71,8 @@ const CNCC = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/CKAD">
-            Quarter IV CN-351: Certified Kubernetes Application Developer (CKAD)
+          <Link href="/Python_for_Biologists">
+            Quarter IV Bio-351: Python for Biologists
           </Link>
         </Text>
 
@@ -80,9 +84,8 @@ const CNCC = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/CDK_Terraform">
-            Quarter V CN-361: Developing Multi-Cloud Apps using CDK for
-            Terraform
+          <Link href="/Bioinformatics_with_Python">
+            Quarter V Bio-361: Bioinformatics with Python
           </Link>
         </Text>
 
@@ -104,7 +107,7 @@ const CNCC = () => {
   );
 };
 
-export default CNCC;
+export default Genomics_and_Bioinformatics;
 
 function CardsToDisplay(props: StateElement) {
   const { title, content, imageUrl, imageAlt } = props;
@@ -130,17 +133,17 @@ function CardsToDisplay(props: StateElement) {
 const coreQuarters = [
   {
     title: "Quarter IV",
-    content: "CN-351: Certified Kubernetes Application Developer (CKAD)",
-    imagePath: "/images/ckad.png",
-    imageAlt: "CKAD",
-    url: "/CKAD",
+    content: "Bio-351: Python for Biologists",
+    imagePath: "/images/image6.png",
+    imageAlt: "Python_for_Biologists",
+    url: "/Python_for_Biologists",
   },
   {
     title: "Quarter V",
-    content: `CN-361: Developing Multi-Cloud Apps using CDK for Terraform`,
-    imagePath: "/images/terraform-cdk.webp",
-    imageAlt: "CDK for Terraform",
-    url: "/CDK_Terraform",
+    content: `Bio-361: Bioinformatics with Python`,
+    imagePath: "/images/image10.png",
+    imageAlt: "Bioinformatics with Python",
+    url: "/Bioinformatics_with_Python",
   },
 ];
 

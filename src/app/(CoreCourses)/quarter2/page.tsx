@@ -1,14 +1,18 @@
 "use client";
-import { Box, Heading, Text, Divider } from "@chakra-ui/react";
+import { Box, Heading, Text, Divider, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import AWS_API_Cloud from "./AWS_API_Cloud";
 import Image from "next/image";
 
+import styles from "../../../styles/Home.module.css";
+
 const Quarter_II = () => {
   return (
     <>
-      <Box display="flex" position="relative">
-        <Image src="/images/cloud.jpg" height={500} width={500} alt="cloud" />
+      <Box mt="1px">
+        <Center>
+          <Image src="/images/cloud.jpg" height={650} width={650} alt="cloud" />
+        </Center>
       </Box>
 
       <Box
@@ -16,7 +20,7 @@ const Quarter_II = () => {
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
-        // className={styles.mainContent}
+        className={styles.mainContent}
         // lineHeight='1.75'
       >
         <Heading

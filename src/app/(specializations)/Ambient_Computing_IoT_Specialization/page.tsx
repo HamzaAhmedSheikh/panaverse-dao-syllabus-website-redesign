@@ -9,6 +9,7 @@ import {
   CardBody,
   Stack,
   Divider,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,6 +25,16 @@ interface StateElement {
 const Ambient_Computing_IOT = () => {
   return (
     <>
+      <Box mt="1px">
+        <Center>
+          <Image
+            src="/images/internet-of-things.png"
+            width={500}
+            height={400}
+            alt="internet-of-things"
+          />
+        </Center>
+      </Box>
       <Box
         display="block"
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
@@ -122,15 +133,15 @@ const coreQuarters = [
     title: "Quarter IV",
     content:
       "AC-351: Ambient Computing with Voice Assistants and Matter Devices",
-    imagePath: "/images/py.jpg",
-    imageAlt: "python",
+    imagePath: "/images/internet-of-things.png",
+    imageAlt: "Ambient Computing with Voice Assistants and Matter Devices",
     url: "/Matter_Devices",
   },
   {
     title: "Quarter V",
     content: `AC-361: Embedded Programming using C and Rust`,
-    imagePath: "/images/mlops.jpg",
-    imageAlt: "mlops",
+    imagePath: "/images/image4.jpg",
+    imageAlt: "Embedded Programming using C and Rust",
     url: "/Embedded_Programming",
   },
 ];

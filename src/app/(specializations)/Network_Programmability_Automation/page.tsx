@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+
 import styles from "../../../styles/Home.module.css";
 
 interface StateElement {
@@ -22,16 +23,16 @@ interface StateElement {
   imageAlt: string;
 }
 
-const CNCC = () => {
+const Network_Programmability_Automation = () => {
   return (
     <>
       <Box mt="1px">
         <Center>
           <Image
-            src="/images/cloud-native-diagram.png"
-            width={500}
-            height={400}
-            alt="cloud native"
+            src="/images/computer_networking.jpg"
+            width={650}
+            height={500}
+            alt="Network_Programmability_Automation"
           />
         </Center>
       </Box>
@@ -43,7 +44,7 @@ const CNCC = () => {
         className={styles.mainContent}
       >
         <Heading
-          id="cloud-native-computing-specialization"
+          id="network_programmability_and_automation_specialization"
           as="h2"
           fontSize="1.5em"
           mt="1rem"
@@ -51,12 +52,17 @@ const CNCC = () => {
           fontWeight="normal"
           color="#159957"
         >
-          Cloud-Native Computing Specialization
+          Network Programmability and Automation Specialization
         </Heading>
 
         <Text as="p" mt="1em" mb="1em" color="#606C71">
-          The Cloud-Native Computing Specialization focuses on Containers,
-          Kubernetes, and CDK for Kubernetes.
+          More than ever, network engineers are finding it challenging to
+          complete their duties entirely manually. Network automation is now
+          crucial due to new protocols, technologies, delivery models, and the
+          requirement for enterprises to become more adaptable and agile. This
+          course teaches network engineers how to automate systems with code
+          using a variety of technologies and tools, including Linux, Python,
+          APIs, and Git.
         </Text>
 
         <Text
@@ -67,8 +73,8 @@ const CNCC = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/CKAD">
-            Quarter IV CN-351: Certified Kubernetes Application Developer (CKAD)
+          <Link href="/CCNA_Certification">
+            Quarter IV NPA-351: CCNA 200-301 Certification
           </Link>
         </Text>
 
@@ -80,9 +86,8 @@ const CNCC = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/CDK_Terraform">
-            Quarter V CN-361: Developing Multi-Cloud Apps using CDK for
-            Terraform
+          <Link href="/Network_Programmability">
+            Quarter V NPA-361: Network Programmability and Automation
           </Link>
         </Text>
 
@@ -104,7 +109,7 @@ const CNCC = () => {
   );
 };
 
-export default CNCC;
+export default Network_Programmability_Automation;
 
 function CardsToDisplay(props: StateElement) {
   const { title, content, imageUrl, imageAlt } = props;
@@ -130,17 +135,17 @@ function CardsToDisplay(props: StateElement) {
 const coreQuarters = [
   {
     title: "Quarter IV",
-    content: "CN-351: Certified Kubernetes Application Developer (CKAD)",
-    imagePath: "/images/ckad.png",
-    imageAlt: "CKAD",
-    url: "/CKAD",
+    content: "NPA-351: CCNA 200-301 Certification",
+    imagePath: "/images/ccna.jpg",
+    imageAlt: "CCNA",
+    url: "/CCNA_Certification",
   },
   {
     title: "Quarter V",
-    content: `CN-361: Developing Multi-Cloud Apps using CDK for Terraform`,
-    imagePath: "/images/terraform-cdk.webp",
-    imageAlt: "CDK for Terraform",
-    url: "/CDK_Terraform",
+    content: `NPA-361: Network Programmability and Automation`,
+    imagePath: "/images/computer_networking.jpg",
+    imageAlt: "Network Programmability and Automation",
+    url: "/Network_Programmability",
   },
 ];
 

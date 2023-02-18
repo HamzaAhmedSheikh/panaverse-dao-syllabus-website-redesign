@@ -1,16 +1,12 @@
 "use client";
 import {
-  Flex,
-  Grid,
   Box,
   Text,
   Heading,
-  Card,
-  CardBody,
-  Stack,
   Divider,
   List,
   ListItem,
+  Center,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,6 +15,11 @@ import styles from "../../../styles/Home.module.css";
 const Embedded_Programming = () => {
   return (
     <>
+      <Box mt="1px">
+        <Center>
+          <Image src="/images/images5.jpg" width={800} height={500} alt="em" />
+        </Center>
+      </Box>
       <Box
         display="block"
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}

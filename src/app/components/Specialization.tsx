@@ -62,8 +62,7 @@ const coreQuarters = [
   },
   {
     title: "Cloud-Native Computing Specialization",
-    content:
-      "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+    content: "CN-351: Certified Kubernetes Application Developer (CKAD)",
     imagePath: "/images/cloud-native-diagram.png",
     imageAlt: "cloud-native-computing",
     url: "/CNCC",
@@ -71,26 +70,24 @@ const coreQuarters = [
   {
     title: "Ambient Computing and IoT Specialization",
     content:
-      "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+      "AC-351: Ambient Computing with Voice Assistants and Matter Devices",
     imagePath: "/images/internet-of-things.png",
     imageAlt: "ambient computing and internet-of-thing",
     url: "/Ambient_Computing_IoT_Specialization",
   },
   {
     title: "Genomics and Bioinformatics Specialization",
-    content:
-      "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+    content: "Bio-351: Python for Biologists",
     imagePath: "/images/Bioinformatics-graphic.png",
     imageAlt: "genomics and bioinformatics",
-    url: "/",
+    url: "/Genomics_Bioinformatics",
   },
   {
     title: "Network Programmability and Automation Specialization",
-    content:
-      "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+    content: "NPA-351: CCNA 200-301 Certification",
     imagePath: "/images/program-3.webp",
     imageAlt: "network programmability and automation",
-    url: "/",
+    url: "/Network_Programmability_Automation",
   },
 ];
 
