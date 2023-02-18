@@ -5,6 +5,7 @@ import CoreCourse from "./CoreCourse";
 import Specialization from "./Specialization";
 import CourseOutcome from "./CourseOutcome";
 import Operational_Cities from "./Operational_Cities";
+import StrategicPartners from "./StrategicPartners";
 
 const Header = () => {
   return (
@@ -50,6 +51,7 @@ const Header = () => {
       <Specialization />
       <CourseOutcome />
       <Operational_Cities />
+      <StrategicPartners />
     </>
   );
 };
