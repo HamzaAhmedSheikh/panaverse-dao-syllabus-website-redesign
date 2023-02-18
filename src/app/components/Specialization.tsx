@@ -74,7 +74,7 @@ const coreQuarters = [
       "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
     imagePath: "/images/internet-of-things.png",
     imageAlt: "ambient computing and internet-of-thing",
-    url: "/",
+    url: "/Ambient_Computing_IoT_Specialization",
   },
   {
     title: "Genomics and Bioinformatics Specialization",

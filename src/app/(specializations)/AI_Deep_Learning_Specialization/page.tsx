@@ -13,14 +13,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-interface StateElement {
+export interface StateElement {
   title: string;
   content?: string;
   imageUrl: string;
   imageAlt: string;
 }
 
-function CardsToDisplay(props: StateElement) {
+export function CardsToDisplay(props: StateElement) {
   const { title, content, imageUrl, imageAlt } = props;
   return (
     <>
