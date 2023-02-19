@@ -159,7 +159,7 @@ function CoreCourse() {
       px={{ base: "10", md: "20" }}
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>Two more quarters remain for specialization:</Heading>
+        <Heading>The Specialization Course Information:</Heading>
 
         <Grid
           templateColumns={{

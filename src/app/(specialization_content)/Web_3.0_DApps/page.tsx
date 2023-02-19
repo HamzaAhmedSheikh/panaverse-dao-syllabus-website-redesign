@@ -62,12 +62,10 @@ const Section_I = () => {
         </Heading>
 
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Duration: 13 Weeks{" "}
+          Duration: 13 Weeks
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Course Description:{" "}
+          Course Description:
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
           In this course you will learn how to develop Web 3.0 DApps, create a

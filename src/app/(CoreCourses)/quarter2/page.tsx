@@ -48,11 +48,9 @@ const Quarter_II = () => {
         </Heading>
 
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
           Duration: 13 Weeks{" "}
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
           Course Description:{" "}
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
@@ -67,7 +65,6 @@ const Quarter_II = () => {
         </Text>
 
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
           Course Outline:{" "}
         </Text>
         <Heading
@@ -104,8 +101,7 @@ const Quarter_II = () => {
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
           <Link href="https://beta.reactjs.org/learn" target="_blank">
-            {" "}
-            Latest Learn React Official Website{" "}
+            Latest Learn React Official Website
           </Link>
         </Text>
 
@@ -121,8 +117,7 @@ const Quarter_II = () => {
             href="https://github.com/panaverse/learn-nextjs"
             target="_blank"
           >
-            {" "}
-            Learn Next.js 13 Learning Repo{" "}
+            Learn Next.js 13 Learning Repo
           </Link>
         </Text>
 
@@ -139,7 +134,6 @@ const Quarter_II = () => {
         </Heading>
 
         <Text as="span" mt="0.8em" color="#606C71">
-          {" "}
           <strong> Chakra UI Docs: </strong>{" "}
         </Text>
         <Text
@@ -262,8 +256,7 @@ const Quarter_II = () => {
         </Text>
 
         <Text as="p" mt="0.7em" color="#606C71">
-          {" "}
-          APIs with Next.js and tRPC{" "}
+          APIs with Next.js and tRPC
         </Text>
 
         <Text
@@ -400,7 +393,7 @@ const Quarter_II = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/quarter-3">Go to Quarter 3 Page</Link>
+          <Link href="/quarter3">Go to Quarter 3 Page</Link>
         </Text>
       </Box>
     </>

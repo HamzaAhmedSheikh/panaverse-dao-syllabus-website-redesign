@@ -14,6 +14,8 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
+import styles from "../../../styles/Home.module.css";
+
 interface StateElement {
   title: string;
   content?: string;
@@ -59,48 +61,6 @@ const coreQuarters = [
   },
 ];
 
-function CoreCourse() {
-  return (
-    <Flex
-      flexDir={{ base: "column", md: "row" }}
-      align={"center"}
-      alignContent="center"
-      alignItems={"center"}
-      maxW={"1440px"}
-      mx="auto"
-      pt={{ base: "5", md: "10" }}
-      px={{ base: "10", md: "20" }}
-    >
-      <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>Two more quarters remain for specialization:</Heading>
-
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(2, 1fr)",
-          }}
-          gap={6}
-          mx="auto"
-          maxW="8xl"
-          mt="1.5rem"
-        >
-          {coreQuarters.map((elem) => (
-            <Link href={elem.url}>
-              <CardsToDisplay
-                imageAlt={elem.imageAlt}
-                imageUrl={elem.imagePath}
-                title={elem.title}
-                content={elem.content}
-              />
-            </Link>
-          ))}
-        </Grid>
-      </Box>
-    </Flex>
-  );
-}
-
 const WEB3_Metaverse = () => {
   return (
     <>
@@ -120,6 +80,7 @@ const WEB3_Metaverse = () => {
         padding={{ sm: "2em 1em", md: "2em 4em", lg: "2em 6em" }}
         margin="0 auto"
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
+        className={styles.mainContent}
       >
         <Heading
           id="web-30-blockchain-and-metaverse-specialization"
@@ -188,3 +149,45 @@ const WEB3_Metaverse = () => {
 };
 
 export default WEB3_Metaverse;
+
+function CoreCourse() {
+  return (
+    <Flex
+      flexDir={{ base: "column", md: "row" }}
+      align={"center"}
+      alignContent="center"
+      alignItems={"center"}
+      maxW={"1440px"}
+      mx="auto"
+      pt={{ base: "5", md: "10" }}
+      px={{ base: "10", md: "20" }}
+    >
+      <Box mx="auto" pt="5" pb="10" textAlign="center">
+        <Heading>The Specialization Course Information:</Heading>
+
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(2, 1fr)",
+          }}
+          gap={6}
+          mx="auto"
+          maxW="8xl"
+          mt="1.5rem"
+        >
+          {coreQuarters.map((elem) => (
+            <Link href={elem.url}>
+              <CardsToDisplay
+                imageAlt={elem.imageAlt}
+                imageUrl={elem.imagePath}
+                title={elem.title}
+                content={elem.content}
+              />
+            </Link>
+          ))}
+        </Grid>
+      </Box>
+    </Flex>
+  );
+}

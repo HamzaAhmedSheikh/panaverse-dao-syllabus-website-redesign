@@ -5,7 +5,6 @@ import {
   Text,
   IconButton,
   Button,
-  Link as ChakraLink,
   Stack,
   Collapse,
   Icon,
@@ -13,8 +12,8 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
+  Center,
 } from "@chakra-ui/react";
 
 import {
@@ -24,13 +23,11 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import DAO_LOGO from "public/images/dao-logo.png";
-// import PIAIC_Logo from "public/images/PIAIC_Logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-
   return (
     <Box>
       <Flex
@@ -51,16 +48,7 @@ export default function Navbar() {
           flex={{ base: 1 }}
           justify={{ base: "flex-start", md: "flex-start" }}
         >
-          <Box
-            as="div"
-            pt="1rem"
-            ml="10px"
-            // position="absolute"
-            // left="0px"
-            // top="0px"
-            // height="30%"
-            // width="30%"
-          >
+          <Box as="div" pt="1rem" ml="10px">
             <Link href="/">
               <Image src={DAO_LOGO} height={50} alt="Logo" />
             </Link>
@@ -70,25 +58,29 @@ export default function Navbar() {
         <Flex flex={{ base: 1, md: "auto" }} justify="flex-end">
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
-            <Button
-              color="#ffffff"
-              // px="25px"
-              // py="5px"
-              // mt="20px"
-              width="10rem"
-              alignItems="center"
-              justifyItems="center"
-              justifyContent="center"
-              bgImage="linear-gradient(270deg,#08d88d,#0eb5a3);"
-              _hover={{
-                backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
-              }}
-              _focus={{
-                backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
-              }}
-            >
-              Apply
-            </Button>
+            <Center>
+              <Button
+                color="#ffffff"
+                // px="25px"
+                // py="5px"
+                // mt="20px"
+                p="1rem"
+                ml="1.2rem"
+                height="2rem"
+                alignItems="center"
+                justifyItems="center"
+                justifyContent="center"
+                bgImage="linear-gradient(270deg,#08d88d,#0eb5a3);"
+                _hover={{
+                  backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+                }}
+                _focus={{
+                  backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+                }}
+              >
+                Apply
+              </Button>
+            </Center>
           </Flex>
           <Flex
             flex={{ base: 1, md: "auto" }}
@@ -141,7 +133,7 @@ const DesktopNav = () => {
                   color: "#FF5349",
                 }}
               >
-                <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
+                <Link href={navItem.href ?? ""}>{navItem.label}</Link>
               </Box>
             </PopoverTrigger>
 
@@ -170,38 +162,39 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <ChakraLink
-      href={href}
+    <Box
       role={"group"}
       display={"block"}
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
     >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
+      <Link href={href}>
+        <Stack direction={"row"} align={"center"}>
+          <Box>
+            <Text
+              transition={"all .3s ease"}
+              _groupHover={{ color: "#159957" }}
+              fontWeight={500}
+            >
+              {label}
+            </Text>
+            <Text fontSize={"sm"}>{subLabel}</Text>
+          </Box>
+          <Flex
             transition={"all .3s ease"}
-            _groupHover={{ color: "#159957" }}
-            fontWeight={500}
+            transform={"translateX(-10px)"}
+            opacity={0}
+            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+            justify={"flex-end"}
+            align={"center"}
+            flex={1}
           >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"#159957"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </ChakraLink>
+            <Icon color={"#159957"} w={5} h={5} as={ChevronRightIcon} />
+          </Flex>
+        </Stack>
+      </Link>
+    </Box>
   );
 };
 
@@ -215,13 +208,34 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
+      <Button
+        color="#ffffff"
+        // px="25px"
+        // py="5px"
+        // mt="20px"
+        p="1rem"
+        ml="1.2rem"
+        mb="1rem"
+        height="2rem"
+        alignItems="center"
+        justifyItems="center"
+        justifyContent="center"
+        bgImage="linear-gradient(270deg,#08d88d,#0eb5a3);"
+        _hover={{
+          backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+        }}
+        _focus={{
+          backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+        }}
+      >
+        Apply
+      </Button>
     </Stack>
   );
 };
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
-
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
@@ -262,9 +276,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <ChakraLink key={child.label} py={2} href={child.href}>
+              <Link key={child.label} href={href}>
                 {child.label}
-              </ChakraLink>
+              </Link>
             ))}
         </Stack>
       </Collapse>
