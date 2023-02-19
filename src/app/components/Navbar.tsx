@@ -5,7 +5,7 @@ import {
   Text,
   IconButton,
   Button,
-  Link,
+  Link as ChakraLink,
   Stack,
   Collapse,
   Icon,
@@ -26,6 +26,7 @@ import {
 import DAO_LOGO from "public/images/dao-logo.png";
 // import PIAIC_Logo from "public/images/PIAIC_Logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -37,12 +38,13 @@ export default function Navbar() {
         py={{ base: 2 }}
         px={{ base: 4 }}
         padding="0px 30px 15px"
-        borderBottom={1}
+        borderBottom={0}
         borderStyle={"none"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
-        justifyContent="flex-end"
+        justifyContent="center"
         align={"flex-end"}
-        bgColor={"#035554"}
+        alignItems="center"
+        bgColor={"#ffffff"}
         fontSize="14px"
       >
         <Flex
@@ -56,11 +58,11 @@ export default function Navbar() {
             // position="absolute"
             // left="0px"
             // top="0px"
-            height="30%"
-            width="30%"
+            // height="30%"
+            // width="30%"
           >
             <Link href="/">
-              <Image src={DAO_LOGO} height={110} alt="Logo" />
+              <Image src={DAO_LOGO} height={50} alt="Logo" />
             </Link>
           </Box>
         </Flex>
@@ -68,13 +70,32 @@ export default function Navbar() {
         <Flex flex={{ base: 1, md: "auto" }} justify="flex-end">
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
+            <Button
+              color="#ffffff"
+              // px="25px"
+              // py="5px"
+              // mt="20px"
+              width="10rem"
+              alignItems="center"
+              justifyItems="center"
+              justifyContent="center"
+              bgImage="linear-gradient(270deg,#08d88d,#0eb5a3);"
+              _hover={{
+                backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+              }}
+              _focus={{
+                backgroundImage: "linear-gradient(270deg,#0eb5a3,#08d88d);",
+              }}
+            >
+              Apply
+            </Button>
           </Flex>
           <Flex
             flex={{ base: 1, md: "auto" }}
             justify="flex-end"
             ml={{ base: -2 }}
             display={{ base: "flex", md: "none" }}
-            color="#ffffff"
+            color="black"
           >
             <IconButton
               onClick={onToggle}
@@ -110,19 +131,18 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
+              <Box
                 p={2}
-                href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={"#ffffff"}
+                color="black"
                 _hover={{
                   textDecoration: "none",
                   color: "#FF5349",
                 }}
               >
-                {navItem.label}
-              </Link>
+                <Link href={navItem.href ?? "#"}>{navItem.label}</Link>
+              </Box>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -150,7 +170,7 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
+    <ChakraLink
       href={href}
       role={"group"}
       display={"block"}
@@ -162,7 +182,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "#159957" }}
             fontWeight={500}
           >
             {label}
@@ -178,10 +198,10 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"#159957"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
-    </Link>
+    </ChakraLink>
   );
 };
 
@@ -242,9 +262,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <ChakraLink key={child.label} py={2} href={child.href}>
                 {child.label}
-              </Link>
+              </ChakraLink>
             ))}
         </Stack>
       </Collapse>
@@ -261,41 +281,43 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: `Tracks for Courses`,
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
+        label: "Web 3 and Metaverse",
+        subLabel: "Developing Smart Contracts and Planet-Scale Web 3.0 Dapps",
+        href: "/Web_3_Blockchain_Metaverse_Specialization",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
+        label: "Cloud-Native Computing",
+        subLabel: "Certified Kubernetes Application Developer (CKAD)",
+        href: "/CNCC",
+      },
+      {
+        label: "Artificial Intelligence (AI) and Deep Learning",
+        subLabel:
+          "Developing Planet-Scale Intelligent APIs and Python Programming",
+        href: "/AI_Deep_Learning_Specialization",
+      },
+      {
+        label: "Ambient Computing and IoT",
+        subLabel: "Ambient Computing with Voice Assistants and Matter Devices",
+        href: "/Ambient_Computing_IoT_Specialization",
+      },
+      {
+        label: "Genomics and Bioinformatics",
+        subLabel: "Python for Biologists",
+        href: "/Genomics_Bioinformatics",
+      },
+      {
+        label: "Network_Programmability_Automation",
+        subLabel: "CCNA 200-301 Certification",
+        href: "/Network_Programmability_Automation",
       },
     ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
   },
 ];

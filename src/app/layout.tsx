@@ -1,9 +1,10 @@
 "use client";
 
 import { ChakraProvider } from "@chakra-ui/react";
-import "./globals.css";
+// import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Navbar2 from "./components/Navbar2";
 
 export default function RootLayout({
   children,
