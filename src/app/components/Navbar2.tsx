@@ -59,7 +59,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box px={4} bg={useColorModeValue("white", "gray.800")}>
+    <Box px={4} bg={"white"}>
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
         <Link href="/">
           <Image src={DAO_LOGO} height={100} width={100} alt="Panaverse" />
@@ -94,15 +94,9 @@ export default function Navbar() {
                   </MenuButton>
                   <MenuList
                     zIndex={5}
-                    bg={useColorModeValue(
-                      "rgb(255, 255, 255)",
-                      "rgb(26, 32, 44)"
-                    )}
+                    bg="rgb(255, 255, 255)"
                     border="none"
-                    boxShadow={useColorModeValue(
-                      "2px 4px 6px 2px rgba(160, 174, 192, 0.6)",
-                      "2px 4px 6px 2px rgba(9, 17, 28, 0.6)"
-                    )}
+                    boxShadow="2px 4px 6px 2px rgba(160, 174, 192, 0.6)"
                   >
                     {dropdownLinks.map((link, index) => (
                       <MenuLink
@@ -123,7 +117,7 @@ export default function Navbar() {
           colorScheme="blue"
           size="md"
           rounded="md"
-          display={{ base: "none", md: "block" }}
+          // display={{ base: "block", md: "block" }}
         >
           <Link href="https://www.piaic.org/" target="_blank">
             Apply
@@ -174,7 +168,7 @@ const NavLink = ({ name, path, onClose }: NavLinkProps) => {
       lineHeight="inherit"
       _hover={{
         textDecoration: "none",
-        color: useColorModeValue("blue.500", "blue.200"),
+        color: "blue.300",
       }}
       onClick={() => onClose()}
     >
@@ -196,7 +190,7 @@ const MenuLink = ({ name, path, onClose }: MenuLinkProps) => {
       <MenuItem
         _hover={{
           color: "blue.400",
-          bg: useColorModeValue("gray.200", "gray.700"),
+          bg: "gray.200",
         }}
       >
         <Text>{name}</Text>

@@ -16,14 +16,14 @@ import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
 
-export interface StateElement {
+interface StateElement {
   title: string;
   content?: string;
   imageUrl: string;
   imageAlt: string;
 }
 
-export function CardsToDisplay(props: StateElement) {
+function CardsToDisplay(props: StateElement) {
   const { title, content, imageUrl, imageAlt } = props;
   return (
     <>
@@ -44,7 +44,7 @@ export function CardsToDisplay(props: StateElement) {
   );
 }
 
-const AI = () => {
+function Artificial_Intelligence() {
   return (
     <>
       <Box display="block" mt="1px">
@@ -121,9 +121,9 @@ const AI = () => {
       </Box>
     </>
   );
-};
+}
 
-export default AI;
+export default Artificial_Intelligence;
 
 const coreQuarters = [
   {
@@ -169,8 +169,8 @@ function CoreCourse() {
           maxW="8xl"
           mt="1.5rem"
         >
-          {coreQuarters.map((elem) => (
-            <Link href={elem.url}>
+          {coreQuarters.map((elem, index) => (
+            <Link href={elem.url} key={index}>
               <CardsToDisplay
                 imageAlt={elem.imageAlt}
                 imageUrl={elem.imagePath}

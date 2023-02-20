@@ -52,8 +52,8 @@ const Quarter1 = () => {
           Quarter I (Core)
         </Heading>
 
-        {quarterOne.map((data) => (
-          <Box>
+        {quarterOne.map((data, index) => (
+          <Box key={index}>
             <Heading
               id="cs-101-object-oriented-programming-using-typescript"
               as="h2"

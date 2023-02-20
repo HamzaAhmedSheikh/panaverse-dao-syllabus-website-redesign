@@ -172,8 +172,8 @@ function CoreCourse() {
           maxW="8xl"
           mt="1.5rem"
         >
-          {coreQuarters.map((elem) => (
-            <Link href={elem.url}>
+          {coreQuarters.map((elem, index) => (
+            <Link href={elem.url} key={index}>
               <CardsToDisplay
                 imageAlt={elem.imageAlt}
                 imageUrl={elem.imagePath}

@@ -70,9 +70,9 @@ const Operational_Cities = () => {
               mt="20px"
               ml="20px"
             >
-              {operationalCities.map((_img) => (
+              {operationalCities.map((_img, index) => (
                 <Image
-                  // display="flex"
+                  key={index}
                   src={_img.imagePath}
                   alt={_img.alt}
                   width={250}

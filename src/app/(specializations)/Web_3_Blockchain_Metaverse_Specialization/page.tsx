@@ -50,7 +50,7 @@ const coreQuarters = [
     content: "Developing Smart Contracts and Planet-Scale Web 3.0 Dapps",
     imagePath: "/images/what_is_smart_contract.avif",
     imageAlt: "what_is_smart_contract",
-    url: "/Web_3.0_DApps",
+    url: "/Web_3_DApps",
   },
   {
     title: "Quarter V MV-361",
@@ -110,7 +110,7 @@ const WEB3_Metaverse = () => {
           fontWeight="normal"
           _hover={{ cursor: "pointer", textDecoration: "underline" }}
         >
-          <Link href="/Web_3.0_DApps">
+          <Link href="/Web_3_DApps">
             Quarter IV W3-351: Developing Smart Contracts and Planet-Scale Web
             3.0 Dapps
           </Link>
@@ -176,8 +176,8 @@ function CoreCourse() {
           maxW="8xl"
           mt="1.5rem"
         >
-          {coreQuarters.map((elem) => (
-            <Link href={elem.url}>
+          {coreQuarters.map((elem, index) => (
+            <Link href={elem.url} key={index}>
               <CardsToDisplay
                 imageAlt={elem.imageAlt}
                 imageUrl={elem.imagePath}
