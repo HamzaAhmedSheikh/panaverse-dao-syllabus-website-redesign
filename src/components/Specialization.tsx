@@ -29,6 +29,7 @@ function CardsToDisplay(props: StateElement) {
         maxW="sm"
         bg="gray.200"
         _hover={{ bg: "gray.700", color: "#ffffff" }}
+        height="100%"
       >
         <CardBody>
           <Image src={imageUrl} width={500} height={500} alt={imageAlt} />

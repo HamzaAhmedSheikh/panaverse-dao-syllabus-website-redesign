@@ -1,11 +1,11 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { PanaverseCommunity } from "./Panaverse_Community";
-import styles from "../../styles/Home.module.css";
-import CoreCourse from "./CoreCourse";
-import Specialization from "./Specialization";
-import CourseOutcome from "./CourseOutcome";
-import Operational_Cities from "./Operational_Cities";
-import StrategicPartners from "./StrategicPartners";
+import { PanaverseCommunity } from "../components/Panaverse_Community";
+import styles from "../styles/Home.module.css";
+import CoreCourse from "../components/CoreCourse";
+import Specialization from "../components/Specialization";
+import CourseOutcome from "../components/CourseOutcome";
+import Operational_Cities from "../components/Operational_Cities";
+import StrategicPartners from "../components/StrategicPartners";
 
 const Header = () => {
   return (

@@ -1,3 +1,4 @@
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 import { Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -18,75 +19,35 @@ const OOP_with_Typescript = () => {
         Object-Oriented Programming with TypeScript
       </Heading>
 
-      <Text
-        as="p"
-        mt="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        Chapters 1-11 of Learning TypeScript: Enhance Your Web Development
-        Skills Using Type-Safe JavaScript:
-        <Link
-          href="https://www.amazon.com/Learning-TypeScript-Development-Type-Safe-JavaScript/dp/1098110331/ref=sr_1_1"
-          target="_blank"
-        >
-          https://www.amazon.com/Learning-TypeScript-Development-Type-Safe-JavaScript/dp/1098110331/ref=sr_1_1
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Chapters 1-11 of Learning TypeScript: Enhance Your Web Development Skills Using Type-Safe JavaScript: "
+        href="https://www.amazon.com/Learning-TypeScript-Development-Type-Safe-JavaScript/dp/1098110331/ref=sr_1_1"
+        hrefHeading="https://www.amazon.com/Learning-TypeScript-Development-Type-Safe-JavaScript/dp/1098110331/ref=sr_1_1"
+      />
 
-      <Text
-        as="p"
-        mt="0.8em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        Learning Repository:
-        <Link
-          href="https://github.com/panaverse/learn-typescript"
-          target="_blank"
-        >
-          https://github.com/panaverse/learn-typescript
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Learning Repository: "
+        href="https://github.com/panaverse/learn-typescript"
+        hrefHeading="https://github.com/panaverse/learn-typescript"
+      />
 
-      <Text
-        as="p"
-        mt="0.8em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        In Class Companion projects and articles for Learning TypeScript:
-        <Link href="https://www.learningtypescript.com/" target="_blank">
-          {" "}
-          https://www.learningtypescript.com/{" "}
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="In Class Companion projects and articles for Learning TypeScript: "
+        href="https://www.learningtypescript.com/"
+        hrefHeading="https://www.learningtypescript.com/"
+      />
+
+      <Reuseable_Text_Link
+        title="Home Project: "
+        href="https://github.com/panaverse/typescript-node-projects"
+        hrefHeading="https://github.com/panaverse/typescript-node-projects"
+      />
 
       <Text as="p" mt="0.8em" color="#606C71">
-        {" "}
-        Home Project:{" "}
+        Fundamentals of TypeScript Quiz
       </Text>
-
-      <Text
-        as="p"
-        mt="0.4em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://github.com/panaverse/typescript-node-projects"
-          target="_blank"
-        >
-          https://github.com/panaverse/typescript-node-projects{" "}
-        </Link>
+      <Text as="p" mt="0.8em" color="#606C71">
+        TypeScript Professional Proficiency Quiz
       </Text>
     </>
   );

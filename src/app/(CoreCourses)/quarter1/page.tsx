@@ -1,21 +1,19 @@
 "use client";
-import {
-  Box,
-  Heading,
-  Flex,
-  Text,
-  Button,
-  Container,
-  Center,
-} from "@chakra-ui/react";
-// import Specialization from "../panaverse/Specialization";
-import { quarterOne } from "../../../../data/data";
-import { AiFillLinkedin } from "react-icons/ai";
-import JavaScriptFundamentals from "./JavaScriptBasic";
+import { Box, Heading, Text, Center } from "@chakra-ui/react";
+
+import TypescriptFundamentals from "./TypescriptBasic";
 import OOP_with_Typescript from "./OOP_with_Typescript";
 import VC_with_Git from "./VC_with_Git";
+
 import Link from "next/link";
 import Image from "next/image";
+
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
+import {
+  Inline_Text_Link,
+  Reuseable_Text_Link,
+} from "@/components/Reuseable_Links/Reuseable_Text_Link";
+import Quarter_Break from "./Quarter_Break";
 
 import styles from "../../../styles/Home.module.css";
 
@@ -41,7 +39,7 @@ const Quarter1 = () => {
         // lineHeight='1.75'
       >
         <Heading
-          id="quarter-i-core"
+          id="html-and-css-homework"
           as="h2"
           fontSize="1.5em"
           mt="1rem"
@@ -49,198 +47,98 @@ const Quarter1 = () => {
           fontWeight="normal"
           color="#159957"
         >
-          Quarter I (Core)
+          HTML and CSS (Homework)
         </Heading>
 
-        {quarterOne.map((data, index) => (
-          <Box key={index}>
-            <Heading
-              id="cs-101-object-oriented-programming-using-typescript"
-              as="h2"
-              fontSize="1.5em"
-              mt="1rem"
-              mb="1rem"
-              fontWeight="normal"
-              color="#159957"
-            >
-              {data.objective}
-            </Heading>
+        <Reuseable_Text_Link
+          title="Learn HTML by Hira Khan (Watch Recorded Videos)"
+          href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
+          hrefHeading="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQ3BALy86tIXICkG874wAc6"
+        />
 
-            <Text as="p" mt="1em" mb="1em" color="#606C71">
-              {data.duration_weeks} Weeks
-            </Text>
+        <Reuseable_Text_Link
+          title="Learn CSS Intro by Hira Khan (Watch Recorded Videos)"
+          href="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQSWIen_zUSEBmtqzPLuRob"
+          hrefHeading="https://www.youtube.com/playlist?list=PLKvqnz8z1zWQSWIen_zUSEBmtqzPLuRob"
+        />
 
-            <Text as="p" mt="1em" mb="1em" color="#606C71">
-              Course Description:
-            </Text>
+        <Heading
+          id="web-3.0-and-metaverse-theory"
+          as="h2"
+          fontSize="1.5em"
+          mt="1rem"
+          mb="1rem"
+          fontWeight="normal"
+          color="#159957"
+        >
+          Web 3.0 and Metaverse Theory
+        </Heading>
 
-            <Text as="p" mt="1em" mb="1em" color="#606C71">
-              {data.description}
-            </Text>
+        <Reuseable_Text_Link
+          title="Introduction to Panaverse DAO"
+          href="https://docs.google.com/presentation/d/12C1s4UBTlR9nZNEkRE6aAuGeRA3s92jx-8nJKo9jdH4/edit?usp=sharing"
+          hrefHeading="https://docs.google.com/presentation/d/12C1s4UBTlR9nZNEkRE6aAuGeRA3s92jx-8nJKo9jdH4/edit?usp=sharing"
+        />
 
-            <Text as="p" mt="1em" mb="1em" color="#606C71">
-              Course Outline:
-            </Text>
+        <Reuseable_Text_Link
+          title="Web 3.0 User Guide"
+          href="https://docs.google.com/presentation/d/1FSbr9aJwO0-fmZHqWy_eHO2N_jwJLmQCy4cG8rd4ctw/edit?usp=sharing"
+          hrefHeading="https://docs.google.com/presentation/d/1FSbr9aJwO0-fmZHqWy_eHO2N_jwJLmQCy4cG8rd4ctw/edit?usp=sharing"
+        />
 
-            <Heading
-              as="h3"
-              fontSize="1.5em"
-              mt="1rem"
-              mb="1rem"
-              fontWeight="normal"
-              color="#159957"
-            >
-              {data.title}
-            </Heading>
+        <Text as="p" mt="0.7em" color="#606C71">
+          Complete Web 3 Assignments included in the Web 3 User Guide
+        </Text>
 
-            <Text
-              as="p"
-              mt="0.7rem"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[0].url} target="_blank">
-                {data.outline[0].text}
-              </Link>
-            </Text>
+        <Reuseable_Text_Link
+          title="Virtual and Augmented  Metaverse User Guide"
+          href="https://docs.google.com/presentation/d/1ADk87hQ0Etr2PfmN9XH7TQ0CHl6XSP_7JWNUbzPdDNc/edit?usp=sharing"
+          hrefHeading="https://docs.google.com/presentation/d/1ADk87hQ0Etr2PfmN9XH7TQ0CHl6XSP_7JWNUbzPdDNc/edit?usp=sharing"
+        />
 
-            <Text
-              as="p"
-              mt="0.7rem"
-              mb="0.8rem"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[1].url} target="_blank">
-                {data.outline[1].text}
-              </Link>
-            </Text>
+        <Heading
+          id="3d-e-commerce"
+          as="h2"
+          fontSize="1.5em"
+          mt="1rem"
+          mb="1rem"
+          fontWeight="normal"
+          color="#159957"
+        >
+          3D E-commerce
+        </Heading>
 
-            <Heading
-              as="h3"
-              fontSize="1.5em"
-              mt="0.7rem"
-              mb="1rem"
-              fontWeight="normal"
-              color="#159957"
-            >
-              Web 3.0 and Metaverse Theory
-            </Heading>
+        <Text as="p" mt="0.7em" color="#606C71">
+          First, in our Web 3 and Metaverse program, we are learning to develop
+          Web 1, and Web 2 websites and apps. Later we will learn to develop Web
+          3 and 3D Commerce templates and experiences.
+        </Text>
 
-            <Text
-              as="p"
-              mb="0.7em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[2].url} target="_blank">
-                {data.outline[2].text}
-              </Link>
-            </Text>
+        <Inline_Text_Link
+          title="But we have to start thinking right now. Let's understand what one virtual store builder company is doing the company name is Emperia."
+          href="https://emperiavr.com/"
+          hrefHeading="https://emperiavr.com/"
+          desc="Using technology, Emperia aims to make virtual worlds into the future of e-commerce, expanding the reach to new and future online shoppers, increasing brand loyalty, and creating a completely new shopping experience."
+        />
 
-            <Text
-              as="p"
-              mt="0.7em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[3].url} target="_blank">
-                {data.outline[3].text}
-              </Link>
-            </Text>
+        <Reuseable_Text_Link
+          title="Emporia just got funded: "
+          href="https://www.retail-insight-network.com/news/emperia-10m-growth/"
+          hrefHeading="https://www.retail-insight-network.com/news/emperia-10m-growth/"
+        />
 
-            <Text as="p" mt="0.7em" color="#606C71">
-              Complete Web 3 Assignments included in the Web 3 User Guide
-            </Text>
+        <Reuseable_Text_Link
+          title="Checkout the Virtual Store Demos: "
+          href="https://emperiavr.com/projects/"
+          hrefHeading="https://emperiavr.com/projects/"
+        />
 
-            <Text
-              as="p"
-              mt="0.6em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[4].url} target="_blank">
-                {data.outline[4].text}
-              </Link>
-            </Text>
+        {/**************** Fundamentals of Typescript ********************/}
 
-            <Heading
-              id="fundamentals-of-javascript-ecmascript-2022-language-specification"
-              as="h3"
-              fontSize="1.5em"
-              mt="1rem"
-              mb="1rem"
-              fontWeight="normal"
-              color="#159957"
-            >
-              {data.title2}
-            </Heading>
+        <TypescriptFundamentals />
 
-            <Text
-              as="p"
-              mt="0.6em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[5].url} target="_blank">
-                {data.outline[5].text}
-              </Link>
-            </Text>
+        {/********* Object-Oriented Programming with TypeScript ***************/}
 
-            <Text
-              as="p"
-              mt="0.6em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[6].url} target="_blank">
-                {data.outline[6].text}
-              </Link>
-            </Text>
-
-            <Text
-              as="p"
-              mt="0.6em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[7].url} target="_blank">
-                {data.outline[7].text}
-              </Link>
-            </Text>
-
-            <Text
-              as="p"
-              mt="0.6em"
-              color="#1e6bb8"
-              bgColor="transparent"
-              fontWeight="normal"
-              _hover={{ cursor: "pointer", textDecoration: "underline" }}
-            >
-              <Link href={data.outline[8].url} target="_blank">
-                {data.outline[8].text}
-              </Link>
-            </Text>
-          </Box>
-        ))}
-
-        <JavaScriptFundamentals />
         <OOP_with_Typescript />
 
         {/************  TypeScript for React **********/}
@@ -255,43 +153,20 @@ const Quarter1 = () => {
         >
           TypeScript for React
         </Heading>
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://profy.dev/article/react-typescript"
-            target="_blank"
-          >
-            Minimal TypeScript Crash Course For React With Interactive Code
-            Exercises
-          </Link>
-        </Text>
+
+        <Reuseable_Link
+          href="https://profy.dev/article/react-typescript"
+          hrefHeading="Minimal TypeScript Crash Course For React With Interactive Code Exercises"
+        />
+
+        {/*********** Quarter Break Assignments and Quizzes ********* */}
+
+        <Quarter_Break />
 
         {/*********** TypeScript for Quizzes ********* */}
 
-        <Heading
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          TypeScript Quizzes
-        </Heading>
-        <Text as="p" mt="0.7em" color="#606C71">
-          Fundamentals of TypeScript Quiz
-        </Text>
-        <Text as="p" mt="0.7em" color="#606C71">
-          TypeScript Professional Proficiency Quiz
-        </Text>
-
         <VC_with_Git />
+
         <Text
           as="p"
           mt="0.8em"
