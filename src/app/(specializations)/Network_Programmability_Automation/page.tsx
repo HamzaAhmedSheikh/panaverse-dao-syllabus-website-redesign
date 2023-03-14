@@ -23,6 +23,14 @@ interface StateElement {
   imageAlt: string;
 }
 
+interface ICoreQuarter {
+  title: string;
+  content: string;
+  imagePath: string;
+  imageAlt: string;
+  url: string;
+}
+
 const Network_Programmability_Automation = () => {
   return (
     <>
@@ -119,6 +127,7 @@ function CardsToDisplay(props: StateElement) {
         maxW="sm"
         bg="gray.200"
         _hover={{ bg: "gray.600", color: "#ffffff" }}
+        height="100%"
       >
         <CardBody>
           <Image src={imageUrl} width={500} height={500} alt={imageAlt} />
@@ -132,7 +141,7 @@ function CardsToDisplay(props: StateElement) {
   );
 }
 
-const coreQuarters = [
+const coreQuarters: ICoreQuarter[] = [
   {
     title: "Quarter IV",
     content: "NPA-351: CCNA 200-301 Certification",

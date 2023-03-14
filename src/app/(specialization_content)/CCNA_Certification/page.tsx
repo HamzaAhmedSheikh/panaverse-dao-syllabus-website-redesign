@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 
 const CCNA_Certification = () => {
   return (
@@ -65,20 +66,12 @@ const CCNA_Certification = () => {
         <Text as="p" mt="0.8em" fontWeight="semibold " color="#606C71">
           Textbook:
         </Text>
-        <Text
-          as="p"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1"
-            target="_blank"
-          >
-            https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1
-          </Link>
-        </Text>
+
+        <Reuseable_Link
+          href="https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1"
+          hrefHeading="https://www.amazon.com/CCNA-200-301-Official-Guide-Library/dp/1587147149/ref=sr_1_1"
+        />
+
         <Divider mt="1rem" />
         <Text
           as="p"
