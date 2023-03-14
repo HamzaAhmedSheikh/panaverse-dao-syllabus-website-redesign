@@ -1,3 +1,4 @@
+"use client";
 import {
   Container,
   SimpleGrid,
@@ -7,15 +8,48 @@ import {
   Text,
   Stack,
   StackDivider,
+  Icon,
   useColorModeValue,
   Box,
 } from "@chakra-ui/react";
+
 import Link from "next/link";
+
+import {
+  IoAnalyticsSharp,
+  IoLogoBitcoin,
+  IoSearchSharp,
+} from "react-icons/io5";
+import { ReactElement } from "react";
+
+interface FeatureProps {
+  text: string;
+  iconBg: string;
+  icon?: ReactElement;
+}
+
+const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+  return (
+    <Stack direction={"row"} align={"center"}>
+      <Flex
+        w={8}
+        h={8}
+        align={"center"}
+        justify={"center"}
+        rounded={"full"}
+        bg={iconBg}
+      >
+        {icon}
+      </Flex>
+      <Text fontWeight={600}>{text}</Text>
+    </Stack>
+  );
+};
 
 export default function CourseOutcome() {
   return (
     <Container maxW={"5xl"} py={12}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
         <Stack spacing={4}>
           <Text
             textTransform={"uppercase"}
@@ -134,16 +168,8 @@ export default function CourseOutcome() {
             </Text>
           </Stack>
         </Stack>
-
-        <Flex order={{ base: 1, md: 2 }}>
-          <Image
-            rounded={"md"}
-            alt={"feature image"}
-            src={"/images/outcome.jpeg"}
-            objectFit={"cover"}
-          />
-        </Flex>
       </SimpleGrid>
     </Container>
   );
 }
+
