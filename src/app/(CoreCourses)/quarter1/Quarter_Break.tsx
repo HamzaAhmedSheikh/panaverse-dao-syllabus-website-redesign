@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { quarter_break_data } from "../../../database/quarter1/Quarter1_Data";
+import { quarter_break_data } from "@/database/quarter1/Quarter1_Data";
 
 const Quarter_Break = () => {
   return (
@@ -26,8 +26,6 @@ const Quarter_Break = () => {
 
           <Text
             as="span"
-            ml="0.2rem"
-            mr="0.2rem"
             color="#1e6bb8"
             bgColor="transparent"
             fontWeight="normal"

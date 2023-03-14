@@ -1,5 +1,5 @@
 import { Heading, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 
 const AWS_API_Cloud = () => {
   return (
@@ -16,70 +16,33 @@ const AWS_API_Cloud = () => {
         AWS Application Composer (Remote Zoom Class)
       </Heading>
 
-      <Text
-        as="p"
-        mt="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://www.youtube.com/watch?v=BujE_tik5r8"
-          target="_blank"
-        >
-          What is AWS Application Composer?
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="What is AWS Application Composer?"
+        href="https://www.youtube.com/watch?v=BujE_tik5r8"
+        hrefHeading="https://www.youtube.com/watch?v=BujE_tik5r8"
+      />
 
-      <Text
-        as="p"
-        mt="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://www.youtube.com/watch?v=p411uh363jQ"
-          target="_blank"
-        >
-          Event-driven apps with AWS Application Composer
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Event-driven apps with AWS Application Composer"
+        href="https://www.youtube.com/watch?v=p411uh363jQ"
+        hrefHeading="https://www.youtube.com/watch?v=p411uh363jQ"
+      />
 
-      <Text
-        as="p"
-        mt="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://aws.amazon.com/application-composer/"
-          target="_blank"
-        >
-          Visually design and build serverless applications quickly
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Visually design and build serverless applications quickly"
+        href="https://aws.amazon.com/application-composer/"
+        hrefHeading="https://aws.amazon.com/application-composer/"
+      />
 
       <Text as="p" mt="0.7em" color="#606C71">
         Must Have: Create Free AWS Account
       </Text>
 
-      <Text
-        as="p"
-        mt="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link href="https://aws.amazon.com/free/" target="_blank">
-          AWS Free Tier
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="AWS Free Tier"
+        href="https://aws.amazon.com/free/"
+        hrefHeading="https://aws.amazon.com/free/"
+      />
 
       <Text as="p" mt="0.7em" color="#606C71">
         <b> Note: </b> For AWS Free Tier you will need a credit or debit card.
@@ -93,42 +56,20 @@ const AWS_API_Cloud = () => {
         reported that this Debit card works with AWS.
       </Text>
 
-      <Text as="p" mt="0.7em" color="#606C71">
-        Now you can create a virtual VISA Debit card through the NayaPay App
-        <Text
-          as="span"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://www.nayapay.com/" target="_blank">
-            (https://www.nayapay.com/ )
-          </Link>
-        </Text>
-        <br />
-        which can be used to create AWS/GCP/Azure accounts. This is good news
-        for those students who find <br /> it difficult to create physical debit
-        and credit cards from banks.
-      </Text>
+      <Reuseable_Text_Link
+        title="Now you can create a virtual VISA Debit card through the NayaPay App"
+        href="https://www.nayapay.com/"
+        hrefHeading="(https://www.nayapay.com/ )"
+        subHeading="which can be used to create AWS/GCP/Azure accounts. This is good news
+        for those students who find  it difficult to create physical debit
+        and credit cards from banks."
+      />
 
-      <Text as="p" mt="0.7em" color="#606C71">
-        <strong> You can also get a $300 credit: </strong>
-        <Text
-          as="span"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://pages.awscloud.com/adoptf90d_GLOBAL_POC-credits.html"
-            target="_blank"
-          >
-            https://pages.awscloud.com/adoptf90d_GLOBAL_POC-credits.html
-          </Link>
-        </Text>
-      </Text>
+      <Reuseable_Text_Link
+        title="You can also get a $300 credit:"
+        href="https://pages.awscloud.com/adoptf90d_GLOBAL_POC-credits.html"
+        hrefHeading="https://pages.awscloud.com/adoptf90d_GLOBAL_POC-credits.html"
+      />
 
       <Heading
         id="multi-cloud-graphql-serverless-api-development-with-cloud-development-kit-for-terraform-cdktf-remote-zoom-class"
@@ -143,90 +84,39 @@ const AWS_API_Cloud = () => {
         Kit for Terraform (CDKTF) (Remote Zoom Class)
       </Heading>
 
-      <Text
-        as="p"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://github.com/panaverse/learn-multicloud-api-development"
-          target="_blank"
-        >
-          Learn Multicloud Serverless API Development using CDK Terraform in
-          Baby Steps
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Learn Multicloud Serverless API Development using CDK Terraform in Baby Steps"
+        href="https://github.com/panaverse/learn-multicloud-api-development"
+        hrefHeading="https://github.com/panaverse/learn-multicloud-api-development"
+      />
 
       <Text as="p" mt="0.7em" mb="0.7em" color="#606C71">
         Web 2.0 Projects
       </Text>
 
-      <Text
-        as="p"
-        mt="0.7em"
-        mb="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://github.com/panaverse/nextjs-projects"
-          target="_blank"
-        >
-          Next.js Projects
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Next.js Projects"
+        href="https://github.com/panaverse/nextjs-projects"
+        hrefHeading="https://github.com/panaverse/nextjs-projects"
+      />
 
-      <Text
-        as="p"
-        mt="0.7em"
-        mb="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://github.com/panaverse/styling-nextjs-projects"
-          target="_blank"
-        >
-          Styling Next.js Projects using TailwindCSS and Chakra UI
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Styling Next.js Projects using TailwindCSS and Chakra UI"
+        href="https://github.com/panaverse/styling-nextjs-projects"
+        hrefHeading="https://github.com/panaverse/styling-nextjs-projects"
+      />
 
-      <Text
-        as="p"
-        mt="0.7em"
-        mb="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link href="https://github.com/ogzhanolguncu/min-todo" target="_blank">
-          Todo Full-Stack App
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Todo Full-Stack App"
+        href="https://github.com/ogzhanolguncu/min-todo"
+        hrefHeading="https://github.com/ogzhanolguncu/min-todo"
+      />
 
-      <Text
-        as="p"
-        mt="0.7em"
-        mb="0.7em"
-        color="#1e6bb8"
-        bgColor="transparent"
-        fontWeight="normal"
-        _hover={{ cursor: "pointer", textDecoration: "underline" }}
-      >
-        <Link
-          href="https://www.youtube.com/watch?v=nzJsYJPCc80"
-          target="_blank"
-        >
-          Build a Twitter Clone
-        </Link>
-      </Text>
+      <Reuseable_Text_Link
+        title="Build a Twitter Clone"
+        href="https://www.youtube.com/watch?v=nzJsYJPCc80"
+        hrefHeading="https://www.youtube.com/watch?v=nzJsYJPCc80"
+      />
     </>
   );
 };

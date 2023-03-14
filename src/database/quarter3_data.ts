@@ -1,4 +1,16 @@
-export const quarter3_data = [
+interface IQuarter3 {
+  id: string;
+  title: string;
+  heading: string;
+  subHeading: string;
+  subHeading2: string;
+  description: string;
+  subHeading3: string;
+  heading2: string;
+  description2: string;
+}
+
+export const quarter3_data: IQuarter3[] = [
   {
     id: "quarter-iii-core",
     title: "Quarter III (Core)",

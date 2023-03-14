@@ -4,11 +4,11 @@ import { Box, Heading, Text, Center } from "@chakra-ui/react";
 import TypescriptFundamentals from "./TypescriptBasic";
 import OOP_with_Typescript from "./OOP_with_Typescript";
 import VC_with_Git from "./VC_with_Git";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 
 import Link from "next/link";
 import Image from "next/image";
 
-import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 import {
   Inline_Text_Link,
   Reuseable_Text_Link,

@@ -1,6 +1,5 @@
-import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 import { Heading, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 
 const OOP_with_Typescript = () => {
   return (

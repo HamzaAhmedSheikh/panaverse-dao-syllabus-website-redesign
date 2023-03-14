@@ -1,13 +1,12 @@
+import { Box, Heading, Text } from "@chakra-ui/react";
 import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 import {
   Inline_Text_Link,
   Reuseable_Text_Link,
 } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 
-import { Box, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
-
-import { git_data } from "../../../database/quarter1/Quarter1_Data";
+import { git_data } from "@/database/quarter1/Quarter1_Data";
 
 const VC_with_Git = () => {
   return (
@@ -46,8 +45,6 @@ const VC_with_Git = () => {
 
           <Text
             as="span"
-            ml="0.2rem"
-            mr="0.2rem"
             color="#1e6bb8"
             bgColor="transparent"
             fontWeight="normal"

@@ -24,6 +24,7 @@ export const Reuseable_Text_Link: React.FC<ILink> = ({
         </Text>
         <Text
           as="span"
+          mr="0.3rem"
           color="#1e6bb8"
           bgColor="transparent"
           fontWeight="normal"

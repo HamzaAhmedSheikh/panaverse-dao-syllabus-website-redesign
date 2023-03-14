@@ -7,6 +7,7 @@ import Link from "next/link";
 interface Link {
   href: string;
   hrefHeading: string;
+  mb?: string;
 }
 
 const Reuseable_Link = (props: Link) => {
@@ -18,6 +19,7 @@ const Reuseable_Link = (props: Link) => {
         bgColor="transparent"
         fontWeight="normal"
         _hover={{ cursor: "pointer", textDecoration: "underline" }}
+        mb={props.mb}
       >
         <Link href={props.href} target="_blank">
           {props.hrefHeading}

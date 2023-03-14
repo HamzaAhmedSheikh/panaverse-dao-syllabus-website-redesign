@@ -1,7 +1,10 @@
 "use client";
 import { Box, Heading, Text, Divider, Center } from "@chakra-ui/react";
-import Link from "next/link";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 import AWS_API_Cloud from "./AWS_API_Cloud";
+import { qurter2_data, data_part2 } from "@/database/quarter2/quarter2_data";
+import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
@@ -48,10 +51,10 @@ const Quarter_II = () => {
         </Heading>
 
         <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks{" "}
+          Duration: 13 Weeks
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:{" "}
+          Course Description:
         </Text>
         <Text as="p" mt="0.8em" color="#606C71">
           The objective of this course is to teach participants to develop
@@ -64,62 +67,57 @@ const Quarter_II = () => {
           Technologies, and Cloud Development Kit for Terraform (CDKTF).
         </Text>
 
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Outline:{" "}
-        </Text>
-        <Heading
-          id="nextjs-13-web-development"
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Next.js 13 Web Development
-        </Heading>
+        {qurter2_data.map(({ id, title, href, hrefHeading }) => (
+          <Box color="#606C71" key={id} mb="0.3rem">
+            <Text as="p" mt="0.4em" color="#606C71">
+              {title}
+            </Text>
 
-        <Text
-          as="p"
-          mt="0.5em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://beta.nextjs.org/docs" target="_blank">
-            Next 13 Official Documentation
-          </Link>
+            <Text
+              as="p"
+              color="#1e6bb8"
+              bgColor="transparent"
+              fontWeight="normal"
+              _hover={{ cursor: "pointer", textDecoration: "underline" }}
+            >
+              <Link href={href} target="_blank">
+                {hrefHeading}
+              </Link>
+            </Text>
+          </Box>
+        ))}
+
+        <Text as="span" mt="0.8em" color="#606C71" fontWeight="semibold">
+          First Project for Quarter 2 Students: Build a Resume Website and
+          Deploy it on a Custom Domain
         </Text>
 
-        <Text
-          as="p"
-          mt="0.5em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://beta.reactjs.org/learn" target="_blank">
-            Latest Learn React Official Website
-          </Link>
+        <Text as="span" mt="0.8em" color="#606C71" fontWeight="semibold">
+          All Quarter 2 students are required to Build their resume/CV website
+          using Next.js 13 and Tailwind CSS
         </Text>
 
-        <Text
-          as="p"
-          mt="0.5em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://github.com/panaverse/learn-nextjs"
-            target="_blank"
-          >
-            Learn Next.js 13 Learning Repo
-          </Link>
-        </Text>
+        {data_part2.map(({ id, title, href, hrefHeading }) => (
+          <Box color="#606C71" key={id} mb="0.3rem">
+            <Text as="p" mt="0.4em" color="#606C71">
+              {title}
+            </Text>
+
+            <Text
+              as="span"
+              ml="0.2rem"
+              mr="0.2rem"
+              color="#1e6bb8"
+              bgColor="transparent"
+              fontWeight="normal"
+              _hover={{ cursor: "pointer", textDecoration: "underline" }}
+            >
+              <Link href={href} target="_blank">
+                {hrefHeading}
+              </Link>
+            </Text>
+          </Box>
+        ))}
 
         <Heading
           id="nextjs-13-using-chakra-ui-remote-zoom-class"
@@ -133,37 +131,17 @@ const Quarter_II = () => {
           Next.js 13 using Chakra UI (Remote Zoom Class)
         </Heading>
 
-        <Text as="span" mt="0.8em" color="#606C71">
-          <strong> Chakra UI Docs: </strong>{" "}
-        </Text>
-        <Text
-          as="span"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://chakra-ui.com/getting-started" target="_blank">
-            https://chakra-ui.com/getting-started
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="CSS Flexbox Explained - Complete Guide to Flexible Containers and Flex Items"
+          href="https://www.freecodecamp.org/news/css-flexbox-complete-guide/"
+          hrefHeading="https://www.freecodecamp.org/news/css-flexbox-complete-guide/"
+        />
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.freecodecamp.org/news/css-flexbox-complete-guide/"
-            target="_blank"
-          >
-            CSS Flexbox Explained – Complete Guide to Flexible Containers and
-            Flex Items
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="Chakra UI Docs"
+          href="https://chakra-ui.com/getting-started"
+          hrefHeading="https://chakra-ui.com/getting-started"
+        />
 
         <Heading
           id="uiux-design-with-figma-tailwindcss-and-chakra-ui-remote-zoom-class"
@@ -178,55 +156,22 @@ const Quarter_II = () => {
           Class)
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.amazon.com/Designing-Prototyping-Interfaces-Figma-interactive/dp/180056418X/ref=sr_1_1_sspa"
-            target="_blank"
-          >
-            Designing and Prototyping Interfaces with Figma: Learn essential
-            UX/UI design principles by creating <br /> interactive prototypes
-            for mobile, tablet, and desktop by Fabio Staiano
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.amazon.com/Designing-Prototyping-Interfaces-Figma-interactive/dp/180056418X/ref=sr_1_1_sspa"
+          hrefHeading="Designing and Prototyping Interfaces with Figma: Learn essential UX/UI design principles by creating interactive prototypes for mobile, tablet, and desktop by Fabio Staiano"
+          mb="0.8rem"
+        />
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.figma.com/community/file/768809027799962739"
-            target="_blank"
-          >
-            Figma Design Kit for TailwindCSS
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.figma.com/community/file/768809027799962739"
+          hrefHeading="Figma Design Kit for TailwindCSS"
+          mb="0.8rem"
+        />
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.figma.com/community/file/971408767069651759"
-            target="_blank"
-          >
-            Chakra UI Figma Kit
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.figma.com/community/file/971408767069651759"
+          hrefHeading="Chakra UI Figma Kit"
+        />
 
         <Heading
           id="api-routes-with-nextjs"
@@ -239,61 +184,27 @@ const Quarter_II = () => {
         >
           API Routes with Next.js
         </Heading>
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://nextjs.org/docs/api-routes/introduction"
-            target="_blank"
-          >
-            API Routes
-          </Link>
+
+        <Reuseable_Text_Link
+          title="API Routes"
+          href="https://nextjs.org/docs/api-routes/introduction"
+          hrefHeading="https://nextjs.org/docs/api-routes/introduction"
+        />
+
+        <Text as="p" mt="0.7em" color="#606C71" fontWeight="semibold">
+          APIs with Next.js and tRPC (Remote Zoom Class)
         </Text>
 
-        <Text as="p" mt="0.7em" color="#606C71">
-          APIs with Next.js and tRPC
-        </Text>
+        <Reuseable_Link
+          href="https://codevoweb.com/build-a-trpc-crud-api-example-with-next-js/"
+          hrefHeading="Build a tRPC CRUD API Example with Next.js"
+        />
 
-        <Text
-          as="p"
-          mt="0.7rem"
-          mb="0.7rem"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://codevoweb.com/build-a-trpc-crud-api-example-with-next-js/"
-            target="_blank"
-          >
-            Build a tRPC CRUD API Example with Next.js
-          </Link>
-        </Text>
-
-        <Text as="p" mt="0.2rem" color="#606C71">
-          Stop building REST APIs for your Next.js apps, use tRPC instead:
-        </Text>
-
-        <Text
-          as="p"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://brockherion.dev/blog/posts/stop-building-rest-apis-for-your-next-apps/"
-            target="_blank"
-          >
-            https://brockherion.dev/blog/posts/stop-building-rest-apis-for-your-next-apps/
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="Stop building REST APIs for your Next.js apps, use tRPC instead"
+          href="https://brockherion.dev/blog/posts/stop-building-rest-apis-for-your-next-apps/"
+          hrefHeading="https://brockherion.dev/blog/posts/stop-building-rest-apis-for-your-next-apps/"
+        />
 
         <Heading
           id="sql-and-prisma"
@@ -307,53 +218,23 @@ const Quarter_II = () => {
           SQL and Prisma
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgres"
-            target="_blank"
-          >
-            Start from scratch with relational databases
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="Start from scratch with relational databases"
+          href="https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgres"
+          hrefHeading="https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgres"
+        />
 
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.youtube.com/watch?v=5hzZtqCNQKk"
-            target="_blank"
-          >
-            SQL For Beginners Video Tutorial
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="SQL For Beginners Video Tutorial"
+          href="https://www.youtube.com/watch?v=5hzZtqCNQKk"
+          hrefHeading="https://www.youtube.com/watch?v=5hzZtqCNQKk"
+        />
 
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.freecodecamp.org/news/dbms-and-sql-basics/"
-            target="_blank"
-          >
-            Database Management Systems and SQL - Tutorial for Beginners
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="Database Management Systems and SQL - Tutorial for Beginners"
+          href="https://www.freecodecamp.org/news/dbms-and-sql-basics/"
+          hrefHeading="https://www.freecodecamp.org/news/dbms-and-sql-basics/"
+        />
 
         <Heading
           id="nextjs-13-using-tailwindcss-remote-zoom-class"
@@ -367,23 +248,14 @@ const Quarter_II = () => {
           Next.js 13 using TailwindCSS (Remote Zoom Class)
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://pragprog.com/titles/tailwind2/modern-css-with-tailwind-second-edition/"
-            target="_blank"
-          >
-            Modern CSS with Tailwind, Second Edition by Noel Rappin
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="Modern CSS with Tailwind, Second Edition by Noel Rappin"
+          href="https://pragprog.com/titles/tailwind2/modern-css-with-tailwind-second-edition/"
+          hrefHeading="https://pragprog.com/titles/tailwind2/modern-css-with-tailwind-second-edition/"
+        />
 
         <AWS_API_Cloud />
+
         <Divider />
         <Text
           as="p"

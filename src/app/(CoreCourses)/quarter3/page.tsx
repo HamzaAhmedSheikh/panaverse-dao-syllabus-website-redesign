@@ -2,7 +2,7 @@
 import { Box, Heading, Text, Center, Divider } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
-import { quarter3_data } from "../../../database/quarter3_data";
+import { quarter3_data } from "@/database/quarter3_data";
 import styles from "../../../styles/Home.module.css";
 import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 
@@ -12,7 +12,7 @@ const Quarter_III = () => {
       <Box>
         <Center>
           <Image
-            src="/images/dollars.jpg"
+            src="/images/template.webp"
             height={650}
             width={650}
             alt="dollar"
@@ -53,11 +53,11 @@ const Quarter_III = () => {
               {data.heading}
             </Heading>
 
-            <Text as="p" mt="0.8em" color="#606C71">
+            <Text as="p" mt="0.8em" color="#606C71" fontWeight="semibold">
               {data.subHeading}
             </Text>
 
-            <Text as="p" mt="0.8em" color="#606C71">
+            <Text as="p" mt="0.8em" color="#606C71" fontWeight="semibold">
               {data.subHeading2}
             </Text>
 
@@ -65,8 +65,8 @@ const Quarter_III = () => {
               {data.description}
             </Text>
 
-            <Text as="p" mt="0.8em" color="#606C71">
-              {data.subHeading3}{" "}
+            <Text as="p" mt="0.8em" color="#606C71" fontWeight="semibold">
+              {data.subHeading3}
             </Text>
 
             <Reuseable_Link
@@ -74,7 +74,7 @@ const Quarter_III = () => {
               hrefHeading="https://github.com/panaverse/panaverse-template-standard"
             />
 
-            <Text as="p" mt="0.8em" color="#606C71">
+            <Text as="p" mt="0.8em" color="#606C71" fontWeight="semibold">
               {data.heading2}
             </Text>
 

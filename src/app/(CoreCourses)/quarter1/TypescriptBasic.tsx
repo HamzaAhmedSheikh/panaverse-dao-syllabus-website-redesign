@@ -1,55 +1,8 @@
-import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
-import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 import { Heading, Text, List, ListItem, Box } from "@chakra-ui/react";
-import Link from "next/link";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
+import { data, data_part2 } from "@/database/quarter1/Quarter1_Data";
 
 import styles from "../../../styles/Home.module.css";
-
-interface Description {
-  id: number;
-  description: string;
-}
-
-let data: Description[] = [
-  {
-    id: 1,
-    description:
-      "Background of JavaScript and How to use JavaScript in Browser",
-  },
-  {
-    id: 2,
-    description:
-      "Variables, Primitive data types Analyzing and modifying data types, and Operators (Chapter 2 of JavaScript from Beginner to Professional)",
-  },
-];
-
-let data_part2: Description[] = [
-  {
-    id: 3,
-    description:
-      "Using Arrays and Objects in Node.js Programs (chapter 3 of JavaScript from Beginner to Professional)",
-  },
-  {
-    id: 4,
-    description:
-      "Using if and if else statements, else if statements, Conditional ternary operators, and switch statements in Node.js programs (chapter 4 of JavaScript from Beginner to Professional)",
-  },
-  {
-    id: 5,
-    description:
-      "Using while loop, do while loop, for loop, for in, and for of loop in Node.js (chapter 5 of JavaScript from Beginner to Professional)",
-  },
-  {
-    id: 6,
-    description:
-      "Using Basic functions, Function arguments, Return, Variable scope in functions, Recursive functions, Nested functions, Anonymous functions, and Function callbacks in Node.js (chapter 6 of JavaScript from Beginner to Professional)",
-  },
-  {
-    id: 7,
-    description:
-      "Using Concurrency, Callbacks, Promises, async / await, and Event loop (chapter 13 of JavaScript from Beginner to Professional)",
-  },
-];
 
 const TypescriptFundamentals = () => {
   return (

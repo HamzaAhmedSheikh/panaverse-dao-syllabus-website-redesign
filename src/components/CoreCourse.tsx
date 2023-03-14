@@ -63,7 +63,7 @@ const coreQuarters = [
     title: "Quarter III (Core)",
     content:
       "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
-    imagePath: "/images/dollar.avif",
+    imagePath: "/images/template.webp",
     imageAlt: "earn-money",
     url: "/quarter3",
   },
