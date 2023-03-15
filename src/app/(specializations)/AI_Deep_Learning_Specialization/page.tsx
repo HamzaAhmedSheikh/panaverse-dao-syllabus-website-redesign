@@ -31,6 +31,7 @@ function CardsToDisplay(props: StateElement) {
         maxW="sm"
         bg="gray.200"
         _hover={{ bg: "gray.600", color: "#ffffff" }}
+        height="100%"
       >
         <CardBody>
           <Image src={imageUrl} width={500} height={500} alt={imageAlt} />
@@ -130,7 +131,7 @@ const coreQuarters = [
     title: "Quarter IV",
     content:
       "AI-351: Developing Planet-Scale Intelligent APIs and Python Programming",
-    imagePath: "/images/py.jpg",
+    imagePath: "/images/machine-learning.jpg",
     imageAlt: "python",
     url: "/Python",
   },
@@ -156,7 +157,9 @@ function CoreCourse() {
       px={{ base: "10", md: "20" }}
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading> The Specialization Course Information: </Heading>
+        <Heading color="#159957" fontFamily="sans-serif">
+          The Specialization Course Information:
+        </Heading>
 
         <Grid
           templateColumns={{

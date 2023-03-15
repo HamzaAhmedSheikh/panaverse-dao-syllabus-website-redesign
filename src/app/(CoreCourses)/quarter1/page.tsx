@@ -118,7 +118,7 @@ const Quarter1 = () => {
           title="But we have to start thinking right now. Let's understand what one virtual store builder company is doing the company name is Emperia."
           href="https://emperiavr.com/"
           hrefHeading="https://emperiavr.com/"
-          desc="Using technology, Emperia aims to make virtual worlds into the future of e-commerce, expanding the reach to new and future online shoppers, increasing brand loyalty, and creating a completely new shopping experience."
+          subHeading="Using technology, Emperia aims to make virtual worlds into the future of e-commerce, expanding the reach to new and future online shoppers, increasing brand loyalty, and creating a completely new shopping experience."
         />
 
         <Reuseable_Text_Link

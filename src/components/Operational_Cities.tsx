@@ -54,7 +54,12 @@ const Operational_Cities = () => {
               mb="4px"
               fontSize={{ base: "20px", md: "large" }}
             >
-              <Text fontWeight="bold" fontSize="1.5rem">
+              <Text
+                fontWeight="semibold"
+                color="#159957"
+                fontFamily="serif"
+                fontSize="3xl"
+              >
                 Operational Cities:
               </Text>
             </Box>

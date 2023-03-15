@@ -61,9 +61,11 @@ export default function Navbar() {
   return (
     <Box px={4} bg={"white"}>
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
-        <Link href="/">
-          <Image src={DAO_LOGO} height={100} width={100} alt="Panaverse" />
-        </Link>
+        <Box margin="2rem">
+          <Link href="/">
+            <Image src={DAO_LOGO} height={100} width={100} alt="Panaverse" />
+          </Link>
+        </Box>
         <HStack spacing={8} alignItems="center">
           <HStack
             as="nav"

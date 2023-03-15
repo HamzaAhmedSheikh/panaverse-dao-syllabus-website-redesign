@@ -105,8 +105,16 @@ function Specialization() {
       px={{ base: "10", md: "20" }}
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>Specialized Tracks:</Heading>
-        <Text>
+        <Heading fontWeight="semibold" color="#159957" fontFamily="serif">
+          Specialized Tracks:
+        </Heading>
+        <Text
+          as="p"
+          fontSize="lg"
+          fontFamily="sans-serif"
+          color="#606C71"
+          fontWeight="semi-bold"
+        >
           After completing the first three quarters the participants will select
           one or more specializations consisting of two courses each:
         </Text>

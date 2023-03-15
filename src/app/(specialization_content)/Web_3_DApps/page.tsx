@@ -5,8 +5,10 @@ import Image from "next/image";
 import Tokennomics from "./Tokennomics";
 
 import styles from "../../../styles/Home.module.css";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
 
-const Section_I = () => {
+const Web3_DApps = () => {
   return (
     <>
       <Box mt="1px">
@@ -27,75 +29,28 @@ const Section_I = () => {
         className={styles.mainContent}
         // lineHeight='1.75'
       >
-        <Heading
-          id="web-3-and-metaverse-specialization"
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Web 3 and Metaverse Specialization
-        </Heading>
-        <Heading
-          id="quarter-iv-web3-and-metaverse"
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter IV Web3 and Metaverse
-        </Heading>
-        <Heading
-          id="w3-351-developing-smart-contracts-and-planet-scale-web-30-dapps"
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps
-        </Heading>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          In this course you will learn how to develop Web 3.0 DApps, create a
+        <Content_Component
+          heading="Web 3 and Metaverse Specialization"
+          title="Quarter IV Web3 and Metaverse"
+          title2="W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="In this course you will learn how to develop Web 3.0 DApps, create a
           project, deploy it in production, write smart contracts, unit test
           them, and create user interfaces for them. We will also learn to
           develop ERC-20 and NFT tokens, DAOs, Oracles, etc. Please note that in
           order to develop Web 3 applications you also need to build on top of
           Web 2.0 technologies which we have already covered in the previous
-          quarters.
-        </Text>
+          quarters."
+        />
 
-        <Text
-          as="p"
-          mt="0.7em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://javascript.plainenglish.io/why-you-should-learn-web-2-0-before-getting-into-web-3-0-d251625990db"
-            target="_blank"
-          >
-            The reasons for learning Web 2 before Web 3
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://javascript.plainenglish.io/why-you-should-learn-web-2-0-before-getting-into-web-3-0-d251625990db"
+          hrefHeading="The reasons for learning Web 2 before Web 3"
+        />
 
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Course Outline:{" "}
+          Course Outline:
         </Text>
 
         <Heading
@@ -110,35 +65,15 @@ const Section_I = () => {
           Blockchain and Metaverse Theory
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.amazon.com/Metaverse-How-Will-Revolutionize-Everything/dp/1324092033/ref=tmm_hrd_swatch_0"
-            target="_blank"
-          >
-            The Metaverse: And How It Will Revolutionize Everything by Matthew
-            Ball
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.amazon.com/Metaverse-How-Will-Revolutionize-Everything/dp/1324092033/ref=tmm_hrd_swatch_0"
+          hrefHeading="The Metaverse: And How It Will Revolutionize Everything by Matthew Ball"
+        />
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://www.packtpub.com/product/mastering-blockchain-fourth-edition/9781803241067">
-            Mastering Blockchain - Fourth Edition by Imran Bashir
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.packtpub.com/product/mastering-blockchain-fourth-edition/9781803241067"
+          hrefHeading="Mastering Blockchain - Fourth Edition by Imran Bashir"
+        />
 
         <Heading
           id="smart-contract-development-in-solidity"
@@ -152,37 +87,15 @@ const Section_I = () => {
           Smart Contract Development in Solidity
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181"
-            target="_blank"
-          >
-            Solidity Programming Essentials - Second Edition By Ritesh Modi
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://www.packtpub.com/product/solidity-programming-essentials-second-edition/9781803231181"
+          hrefHeading="Solidity Programming Essentials - Second Edition By Ritesh Modi"
+        />
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://github.com/panaverse/defi-dapps-solidity-smart-contracts"
-            target="_blank"
-          >
-            Solidity Learning Repo
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://github.com/panaverse/defi-dapps-solidity-smart-contracts"
+          hrefHeading="Solidity Learning Repo"
+        />
 
         <Heading
           id="dapp-development-using-ethersjs-and-nextjs-13"
@@ -196,23 +109,13 @@ const Section_I = () => {
           Dapp Development using Ethers.js and Next.js 13
         </Heading>
 
-        <Text
-          as="p"
-          mt="0.8em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://github.com/panaverse/dapps-nextjs"
-            target="_blank"
-          >
-            Dapp Learning Repo
-          </Link>
-        </Text>
+        <Reuseable_Link
+          href="https://github.com/panaverse/dapps-nextjs"
+          hrefHeading="Dapp Learning Repo"
+        />
 
         <Tokennomics />
+
         <Divider mt="1rem" />
         <Text
           as="p"
@@ -229,4 +132,4 @@ const Section_I = () => {
   );
 };
 
-export default Section_I;
+export default Web3_DApps;

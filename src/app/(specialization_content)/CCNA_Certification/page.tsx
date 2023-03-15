@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
 import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
 
 const CCNA_Certification = () => {
   return (
@@ -26,42 +27,13 @@ const CCNA_Certification = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
-        <Heading
-          id="quarter-iv-network-programmability-and-automation-specialization"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter IV Network Programmability and Automation Specialization
-        </Heading>
-        <Heading
-          id="npa-351-ccna-200-301-certification"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          NPA-351: CCNA 200-301 Certification
-        </Heading>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.6em" color="#606C71">
-          This course will focus on learning the basics of the networking and
-          preparing for the new Cisco Certified Network Associate (CCNA) exam.
-          This comprehensive course focuses on the solutions and technologies
-          needed to implement and administer a broad range of modern networking
-          and IT infrastructure.
-        </Text>
+        <Content_Component
+          heading="Quarter IV Network Programmability and Automation Specialization"
+          title="NPA-351: CCNA 200-301 Certification"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="This course will focus on learning the basics of the networking and preparing for the new Cisco Certified Network Associate (CCNA) exam. This comprehensive course focuses on the solutions and technologies needed to implement and administer a broad range of modern networking and IT infrastructure."
+        />
 
         <Text as="p" mt="0.8em" fontWeight="semibold " color="#606C71">
           Textbook:

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
 
 const Python_for_Biologists = () => {
   return (
@@ -25,54 +27,22 @@ const Python_for_Biologists = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
-        <Heading
-          id="quarter-iv-genomics-and-bioinformatics-specialization"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter IV Genomics and Bioinformatics Specialization
-        </Heading>
-        <Heading
-          id="bio-351-python-for-biologists"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Bio-351: Python for Biologists
-        </Heading>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.6em" color="#606C71">
-          This course will focus on learning the basics of the Python
-          programming language through genomics examples
-        </Text>
+        <Content_Component
+          heading="Quarter IV Genomics and Bioinformatics Specialization"
+          title="Bio-351: Python for Biologists"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="This course will focus on learning the basics of the Python programming language through genomics examples"
+        />
 
         <Text as="p" mt="0.8em" fontWeight="semibold " color="#606C71">
           Textbook:
         </Text>
-        <Text
-          as="p"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link href="https://www.pythonforbiologists.org/" target="_blank">
-            https://www.pythonforbiologists.org/
-          </Link>
-        </Text>
+
+        <Reuseable_Link
+          href="https://www.pythonforbiologists.org/"
+          hrefHeading="https://www.pythonforbiologists.org/"
+        />
 
         <Divider mt="1rem" />
         <Text

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
+import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
 
 const Bioinformatics_with_Python = () => {
   return (
@@ -29,47 +31,21 @@ const Bioinformatics_with_Python = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
-        <Heading
-          id="quarter-v-bio-361-bioinformatics-with-python"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter V Bio-361: Bioinformatics with Python
-        </Heading>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          In this course we will discover modern, next-generation sequencing
-          libraries from the powerful Python ecosystem to perform cutting-edge
-          research and analyze large amounts of biological data.
-        </Text>
+        <Content_Component
+          heading="Quarter V Bio-361: Bioinformatics with Python"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="In this course we will discover modern, next-generation sequencing libraries from the powerful Python ecosystem to perform cutting-edge research and analyze large amounts of biological data."
+        />
 
         <Text as="p" mt="0.8em" fontWeight="semibold " color="#606C71">
           Textbook:
         </Text>
-        <Text
-          as="p"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_"
-            target="_blank"
-          >
-            https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_
-          </Link>
-        </Text>
+
+        <Reuseable_Link
+          href="https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_"
+          hrefHeading="https://www.amazon.com/Bioinformatics-Python-Cookbook-applications-computational/dp/1803236426/ref=sr_1_"
+        />
         <Divider mt="1rem" />
         <Text
           as="p"

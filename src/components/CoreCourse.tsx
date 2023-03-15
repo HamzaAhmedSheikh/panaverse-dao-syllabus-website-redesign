@@ -82,8 +82,16 @@ function CoreCourse() {
       px={{ base: "10", md: "20" }}
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>Core Courses (Common in All Specializations):</Heading>
-        <Text>
+        <Heading fontWeight="semibold" color="#159957" fontFamily="serif">
+          Core Courses (Common in All Specializations):
+        </Heading>
+        <Text
+          as="p"
+          fontSize="lg"
+          fontFamily="sans-serif"
+          color="#606C71"
+          fontWeight="semi-bold"
+        >
           Every participant of the program will start by completing the
           following three core courses:
         </Text>

@@ -140,7 +140,7 @@ const coreQuarters = [
   {
     title: "Quarter V",
     content: `AC-361: Embedded Programming using C and Rust`,
-    imagePath: "/images/image4.jpg",
+    imagePath: "/images/computer-programming-microelectronics.jpg",
     imageAlt: "Embedded Programming using C and Rust",
     url: "/Embedded_Programming",
   },
@@ -157,9 +157,12 @@ function CoreCourse() {
       mx="auto"
       pt={{ base: "5", md: "10" }}
       px={{ base: "10", md: "20" }}
+      height="100%"
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>The Specialization Course Information:</Heading>
+        <Heading color="#159957" fontFamily="sans-serif">
+          The Specialization Course Information:
+        </Heading>
 
         <Grid
           templateColumns={{

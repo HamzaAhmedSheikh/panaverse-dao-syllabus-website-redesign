@@ -31,6 +31,7 @@ function CardsToDisplay(props: StateElement) {
         maxW="sm"
         bg="gray.200"
         _hover={{ bg: "gray.600", color: "#ffffff" }}
+        height="100%"
       >
         <CardBody>
           <Image src={imageUrl} width={500} height={500} alt={imageAlt} />
@@ -48,14 +49,14 @@ const coreQuarters = [
   {
     title: "Quarter IV W3-351",
     content: "Developing Smart Contracts and Planet-Scale Web 3.0 Dapps",
-    imagePath: "/images/what_is_smart_contract.avif",
+    imagePath: "/images/what_is_smart_contract.jpg",
     imageAlt: "what_is_smart_contract",
     url: "/Web_3_DApps",
   },
   {
     title: "Quarter V MV-361",
     content: `Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences`,
-    imagePath: "/images/download.jpg",
+    imagePath: "/images/metaverse2.jpg",
     imageAlt: "metaverses",
     url: "/Metaverse",
   },
@@ -163,7 +164,9 @@ function CoreCourse() {
       px={{ base: "10", md: "20" }}
     >
       <Box mx="auto" pt="5" pb="10" textAlign="center">
-        <Heading>The Specialization Course Information:</Heading>
+        <Heading color="#159957" fontFamily="sans-serif">
+          The Specialization Course Information:
+        </Heading>
 
         <Grid
           templateColumns={{

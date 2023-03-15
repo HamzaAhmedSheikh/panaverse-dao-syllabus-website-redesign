@@ -18,7 +18,7 @@ export const Reuseable_Text_Link: React.FC<ILink> = ({
 }) => {
   return (
     <>
-      <Box color="#606C71" mb="0.8em">
+      <Box as="div" color="#606C71" mb="0.8em">
         <Text as="p" mt="0.8em" color="#606C71">
           {title}
         </Text>
@@ -44,18 +44,18 @@ interface IQuarter {
   title?: string;
   href: string;
   hrefHeading: string;
-  desc?: string;
+  subHeading?: string;
 }
 
 export const Inline_Text_Link: React.FC<IQuarter> = ({
   title,
   href,
   hrefHeading,
-  desc,
+  subHeading,
 }) => {
   return (
     <>
-      <Box mt="1rem">
+      <Box mt="0.8rem">
         <Text as="span" color="#606C71">
           {title}
           <Text
@@ -71,9 +71,9 @@ export const Inline_Text_Link: React.FC<IQuarter> = ({
               {hrefHeading}
             </Link>
           </Text>
-          <Text as="p" mt="0.7rem" color="#606C71">
-            {desc}
-          </Text>
+          {/* <Text as="p" mt="0.7rem" color="#606C71"> */}
+          {subHeading}
+          {/* </Text> */}
         </Text>
       </Box>
     </>

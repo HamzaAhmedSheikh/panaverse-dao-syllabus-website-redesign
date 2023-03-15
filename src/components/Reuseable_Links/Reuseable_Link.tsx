@@ -10,19 +10,24 @@ interface Link {
   mb?: string;
 }
 
-const Reuseable_Link = (props: Link) => {
+const Reuseable_Link: React.FC<Link> = ({
+  href,
+  hrefHeading,
+  mb = "0.8rem",
+}) => {
   return (
     <>
       <Text
         as="p"
         color="#1e6bb8"
+        mt="0.5rem"
         bgColor="transparent"
         fontWeight="normal"
         _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        mb={props.mb}
+        mb={mb}
       >
-        <Link href={props.href} target="_blank">
-          {props.hrefHeading}
+        <Link href={href} target="_blank">
+          {hrefHeading}
         </Link>
       </Text>
     </>

@@ -31,7 +31,7 @@ export const PanaverseCommunity = () => {
               as="div"
               color="#606C71"
               fontSize={"lg"}
-              fontFamily="serif"
+              fontFamily="sans-serif"
               fontWeight="medium"
             >
               The internet is without a doubt the most important technological
@@ -79,6 +79,7 @@ export const PanaverseCommunity = () => {
               fontSize="1.5em"
               fontWeight="semibold"
               color="#159957"
+              fontFamily="serif"
             >
               The Program in a Nutshell: Earn While You Learn
             </Heading>
@@ -107,7 +108,7 @@ export const PanaverseCommunity = () => {
 export function Introduction() {
   return (
     <>
-      <Container maxW={"5xl"} py={2} fontFamily="serif">
+      <Container maxW={"5xl"} py={2} fontFamily="sans-serif">
         <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10}>
           <Stack spacing={4}>
             <Heading
@@ -115,6 +116,7 @@ export function Introduction() {
               fontSize="1.5em"
               fontWeight="semibold"
               color="#159957"
+              fontFamily="serif"
             >
               Program of Studies
             </Heading>

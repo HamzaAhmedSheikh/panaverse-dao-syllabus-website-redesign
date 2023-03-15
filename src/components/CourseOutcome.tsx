@@ -63,7 +63,9 @@ export default function CourseOutcome() {
           >
             Our Plan
           </Text>
-          <Heading> The Outcome for Participants of the Program </Heading>
+          <Heading fontWeight="semibold" color="#159957" fontFamily="serif">
+            The Outcome for Participants of the Program
+          </Heading>
           <Text color={"gray.500"} fontSize={"lg"} fontFamily="sans-serif">
             The graduates of this program will own products (Full-Stack App
             Templates, AR and VR Experiences, and APIs) that are marketed
@@ -172,4 +174,3 @@ export default function CourseOutcome() {
     </Container>
   );
 }
-

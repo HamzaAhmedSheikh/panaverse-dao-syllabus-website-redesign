@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import styles from "../../../styles/Home.module.css";
 import Reuseable_Link from "@/components/Reuseable_Links/Reuseable_Link";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
 
 const Network_Programmability = () => {
   return (
@@ -26,31 +27,12 @@ const Network_Programmability = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
-        <Heading
-          id="quarter-v-npa-361-network-programmability-and-automation"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter V NPA-361: Network Programmability and Automation
-        </Heading>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.6em" color="#606C71">
-          Traditional network management techniques can't be effectively
-          automated and don't scale well. By implementing network
-          programmability based on Application Programming Interfaces, this
-          course will assist in overcoming issues of the future and help you
-          develop the skills required for the Next-Generation Network Engineer.
-        </Text>
+        <Content_Component
+          heading="Quarter V NPA-361: Network Programmability and Automation"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="Traditional network management techniques can't be effectively automated and don't scale well. By implementing network programmability based on Application Programming Interfaces, this course will assist in overcoming issues of the future and help you develop the skills required for the Next-Generation Network Engineer."
+        />
 
         <Text as="p" mt="0.8em" fontWeight="semibold " color="#606C71">
           Textbook:

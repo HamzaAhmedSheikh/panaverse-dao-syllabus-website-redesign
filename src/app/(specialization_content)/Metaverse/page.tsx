@@ -5,6 +5,8 @@ import Link from "next/link";
 import Blender_3D from "./Blender_3D";
 
 import styles from "../../../styles/Home.module.css";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
 
 const Metaverse = () => {
   return (
@@ -12,7 +14,7 @@ const Metaverse = () => {
       <Box mt="1px">
         <Center>
           <Image
-            src="/images/metaverse3.jpg"
+            src="/images/metaverse1.jpg"
             height={650}
             width={650}
             alt="metaverse"
@@ -27,26 +29,11 @@ const Metaverse = () => {
         fontSize={{ sm: "1em", md: "1.1em", lg: "1.1em" }}
         className={styles.mainContent}
       >
-        <Heading
-          id="quarter-v-mv-361-developing-planet-scale-open-virtual-and-augmented-metaverse-experiences"
-          as="h3"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter V MV-361: Developing Planet-Scale Open Virtual and Augmented
-          Metaverse Experiences
-        </Heading>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Duration: 13 Weeks
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          Course Description:
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          The Web is the Metaverse. The metaverse requires an infrastructure
+        <Content_Component
+          heading="Quarter V MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description:"
+          description="The Web is the Metaverse. The metaverse requires an infrastructure
           that connects all of the metaverses so that we can travel between
           them. This is only achievable with open web-based metaverses. The
           internet and its browsers are magical. Federated but linked
@@ -56,32 +43,19 @@ const Metaverse = () => {
           have to extend online responsive design from mobile to desktop to 3D,
           Augmented Reality, and Virtual Reality. This course will teach you how
           to build the Open Social Spatial Web with WebXR and WebGPU
-          technologies.
-        </Text>
+          technologies."
+        />
 
         <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Course Outline:{" "}
+          Course Outline:
         </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Open Metaverse Web Development{" "}
-        </Text>
-        <Text
-          as="p"
-          mt="0.5em"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://github.com/panaverse/metaverse-web"
-            target="_blank"
-          >
-            Open Metaverse Learning Repo
-          </Link>
-        </Text>
+
+        <Reuseable_Text_Link
+          title="Open Metaverse Web Development"
+          href="https://github.com/panaverse/metaverse-web"
+          hrefHeading="https://github.com/panaverse/metaverse-web"
+        />
+
         <Blender_3D />
 
         <Divider mt="1rem" />

@@ -2,6 +2,9 @@
 import { Box, Text, Heading, Divider, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
+import Content_Component from "@/components/Reuseable_Links/Content_Component";
+import { Reuseable_Text_Link } from "@/components/Reuseable_Links/Reuseable_Text_Link";
+
 import styles from "../../../styles/Home.module.css";
 
 const CDK_Terraform = () => {
@@ -22,65 +25,27 @@ const CDK_Terraform = () => {
             alt="terraform cdk"
           />
         </Center>
-        <Heading
-          id="quarter-v-cn-361-developing-multi-cloud-apps-using-cdk-for-terraform"
-          as="h2"
-          fontSize="1.5em"
-          mt="1rem"
-          mb="1rem"
-          fontWeight="normal"
-          color="#159957"
-        >
-          Quarter V CN-361: Developing Multi-Cloud Apps using CDK for Terraform
-        </Heading>
 
-        <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Duration: 13 Weeks{" "}
-        </Text>
-        <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Course Description:{" "}
-        </Text>
-
-        <Text as="p" mt="0.6em" color="#606C71">
-          Terraform lets you use the same workflow to manage multiple providers
+        <Content_Component
+          heading="Quarter V CN-361: Developing Multi-Cloud Apps using CDK for Terraform"
+          information="Duration: 13 Weeks"
+          descriptionHeading="Course Description: "
+          description="Terraform lets you use the same workflow to manage multiple providers
           and handle cross-cloud dependencies. This simplifies management and
-          orchestration for large-scale, multi-cloud infrastructures.
-        </Text>
-
-        <Text as="p" mt="0.6em" color="#606C71">
-          Cloud Development Kit for Terraform (CDKTF) allows you to use familiar
+          orchestration for large-scale, multi-cloud infrastructures."
+          sub_description="Cloud Development Kit for Terraform (CDKTF) allows you to use familiar
           programming languages to define and provision infrastructure. This
           gives you access to the entire Terraform ecosystem without learning
           HashiCorp Configuration Language (HCL) and lets you leverage the power
-          of your existing toolchain for testing, dependency management, etc.
-        </Text>
+          of your existing toolchain for testing, dependency management, etc."
+          sub_description2="Course Outline:"
+        />
 
-        <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          Course Outline:{" "}
-        </Text>
-
-        <Text as="p" mt="0.8em" color="#606C71">
-          {" "}
-          CDK for Terraform{" "}
-        </Text>
-        <Text
-          as="p"
-          color="#1e6bb8"
-          bgColor="transparent"
-          fontWeight="normal"
-          _hover={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          <Link
-            href="https://developer.hashicorp.com/terraform/cdktf"
-            target="_blank"
-          >
-            {" "}
-            https://developer.hashicorp.com/terraform/cdktf{" "}
-          </Link>
-        </Text>
+        <Reuseable_Text_Link
+          title="CDK for Terraform"
+          href="https://developer.hashicorp.com/terraform/cdktf"
+          hrefHeading="https://developer.hashicorp.com/terraform/cdktf"
+        />
 
         <Divider mt="1rem" />
         <Text

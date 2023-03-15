@@ -58,7 +58,7 @@ const VC_with_Git = () => {
       ))}
 
       <Inline_Text_Link
-        title="For practice:"
+        title="For practice: "
         href="https://try.github.io/levels/1/challenges/1"
         hrefHeading="https://try.github.io/levels/1/challenges/1"
       />
