@@ -26,6 +26,8 @@ import DAO_LOGO from "public/images/dao-logo.png";
 import Link from "next/link";
 import Image from "next/image";
 
+import styles from "../styles/Home.module.css";
+
 const navLinks = [{ name: "Home", path: "/" }];
 
 const dropdownLinks = [
@@ -60,10 +62,23 @@ export default function Navbar() {
 
   return (
     <Box px={4} bg={"white"}>
-      <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
-        <Box margin="2rem">
+      <Flex
+        h={16}
+        alignItems="center"
+        justifyContent="space-between"
+        mx="auto"
+        m="1"
+        className={styles._m}
+        borderBottom="none"
+      >
+        <Box mx="2rem" my="1rem" className={styles._margin}>
           <Link href="/">
-            <Image src={DAO_LOGO} height={100} width={100} alt="Panaverse" />
+            <Image
+              src={DAO_LOGO}
+              height={100}
+              width={100}
+              alt="Panaverse Logo"
+            />
           </Link>
         </Box>
         <HStack spacing={8} alignItems="center">

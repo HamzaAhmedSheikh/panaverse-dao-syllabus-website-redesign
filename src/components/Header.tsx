@@ -18,6 +18,7 @@ const Header = () => {
         backgroundColor="#159957"
         bgGradient="linear-gradient(120deg, #155799, #159957)"
         role="banner"
+        border="none"
       >
         <Heading
           as="h1"
